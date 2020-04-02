@@ -1,6 +1,8 @@
 import appleMusic from '../../../assets/images/appleMusic.png';
 import spotify from '../../../assets/images/spotify.png';
 import tidal from '../../../assets/images/tidal.svg';
+import googlePlay from '../../../assets/images/googlePlay.png';
+import soundcloud from '../../../assets/images/soundcloud.png';
 
 export function getAlbums() {
   return [
@@ -45,15 +47,30 @@ export function getAlbums() {
 export function getArtistPlatforms() {
   return [
     {
-      link:
-        'https://geo.music.apple.com/us/artist/zayland/1314125293?mt=1&app=music&ls=1',
-      title: 'Apple Music',
-      iconSrc: appleMusic
+      link: 'https://soundcloud.com/zaylandxx',
+      title: 'Soundcloud',
+      iconSrc: soundcloud
     },
     {
       link: 'https://open.spotify.com/artist/5M9hQI5iiKLFHZ8JRaZafM',
       title: 'Spotify',
       iconSrc: spotify
+    },
+    {
+      link: 'https://tidal.com/browse/artist/9286800?play=true',
+      title: 'Tidal',
+      iconSrc: tidal
+    },
+    {
+      link: 'https://play.google.com/music/listen?u=0#/sr/zayland',
+      title: 'Google Play',
+      iconSrc: googlePlay
+    },
+    {
+      link:
+        'https://geo.music.apple.com/us/artist/zayland/1314125293?mt=1&app=music&ls=1',
+      title: 'Apple Music',
+      iconSrc: appleMusic
     }
   ];
 }
