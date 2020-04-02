@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
-import { Nav, Menu } from '../../Components';
+import { Nav, Menu, Home, Listen } from '../../Components';
+import { Switch, Route } from 'react-router-dom';
 
 class HomePage extends Component {
   state = {
@@ -33,21 +34,10 @@ class HomePage extends Component {
         {this.state.isMenuOpen && this.renderMenu()}
         <div className='homepage--container pa2 flex flex-column items-center'>
           <Nav toggleMenu={this.toggleMenu} />
-
-          <main className='w-100 h-100 flex justify-center items-center'>
-            <section className='w-100 flex flex-column flex-row-ns justify-center items-center mh5'>
-              <div className='w-100 w-75-ns pa4-ns flex justify-center items-center'>
-                <img
-                  src='https://zayland-assets.s3.amazonaws.com/images/Zayland_NobodyKnows_FinalCover.png'
-                  alt=''
-                  className='w-75-ns w-100'
-                />
-              </div>
-              <div className='w-100 w-50-ns pa4-ns'>
-                <h2>Zayland</h2>
-              </div>
-            </section>
-          </main>
+          <Switch>
+            <Route exact path='/home' component={Home} />
+            <Route exact path='/home/listen' component={Listen} />
+          </Switch>
         </div>
       </>
     );
