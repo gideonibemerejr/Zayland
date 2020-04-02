@@ -1,8 +1,8 @@
-import appleMusic from '../../../assets/images/appleMusic.png';
-import spotify from '../../../assets/images/spotify.png';
-import tidal from '../../../assets/images/tidal.svg';
-import googlePlay from '../../../assets/images/googlePlay.png';
-import soundcloud from '../../../assets/images/soundcloud.png';
+import appleMusic from '../assets/images/appleMusic.png';
+import spotify from '../assets/images/spotify.png';
+import tidal from '../assets/images/tidal.svg';
+import googlePlay from '../assets/images/googlePlay.png';
+import soundcloud from '../assets/images/soundcloud.png';
 
 export function getAlbums() {
   return [

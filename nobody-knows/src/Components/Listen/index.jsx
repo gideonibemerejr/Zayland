@@ -1,5 +1,5 @@
 import React from 'react';
-import { getAlbums, getArtistPlatforms } from './data';
+import { getAlbums, getArtistPlatforms } from '../../data';
 
 const albums = getAlbums();
 const platforms = getArtistPlatforms();
@@ -25,7 +25,7 @@ const Listen = () => {
               </div>
             ))}
           </div>
-          <div className='cf pa2 flex flex-column flex-row-ns flex-wrap items-center justify-center'>
+          <div className='cf pa2 flex flex-column flex-row-ns flex-wrap flex-wrap-reverse items-center justify-center'>
             {albums.map((album, idx) => (
               <div key={idx} className='fl w-100 w-50-m w-20-l pa3'>
                 <a

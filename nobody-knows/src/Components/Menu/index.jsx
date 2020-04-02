@@ -11,19 +11,27 @@ const Menu = ({ toggleMenu }) => {
         <div className='h-100 flex flex-column justify-center items-center mv0 mx-auto z-2 '>
           <ul className='list pa0 ma0 flex flex-column justify-between items-center white-80 f2 f1-ns lh-copy fw7'>
             <li>
-              <Link className='link white-80 hover-blue ' to='/home'>
+              <Link className='link white-80 hover-blue pointer ' to='/home'>
                 HOME
               </Link>
             </li>
             <li>
-              <Link className='link white-80 hover-blue ' to='/home/listen'>
+              <Link
+                className='link white-80 hover-blue pointer '
+                to='/home/listen'
+              >
                 LISTEN
               </Link>
             </li>
             <li>
-              <Link className='link white-80 hover-blue' to='/home/watch'>
+              <a
+                className='link white-80 hover-blue pointer'
+                href='https://www.youtube.com/channel/UCBWY9m5zQa7bIoy7ZK8QAuQ'
+                rel='noopener noreferrer'
+                target='_blank'
+              >
                 WATCH
-              </Link>
+              </a>
             </li>
           </ul>
         </div>
