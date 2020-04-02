@@ -6,7 +6,7 @@ function App() {
   return (
     <Router>
       <Route exact path='/' component={LandingPage} />
-      {/* <Route path='/home' component={HomePage} /> */}
+      <Route path='/home' component={HomePage} />
     </Router>
   );
 }
