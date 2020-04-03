@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { Nav, Menu, Home, Listen } from '../../Components';
+import { Nav, Menu, Home, Credits } from '../../Components';
 import { Switch, Route } from 'react-router-dom';
 
 class HomePage extends Component {
@@ -36,7 +36,7 @@ class HomePage extends Component {
           <Nav toggleMenu={this.toggleMenu} />
           <Switch>
             <Route exact path='/home' component={Home} />
-            <Route exact path='/home/listen' component={Listen} />
+            <Route exact path='/home/credits' component={Credits} />
           </Switch>
         </div>
       </>

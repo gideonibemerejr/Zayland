@@ -5,7 +5,7 @@ const LandingPage = () => {
   return (
     <div className='landingpage--container flex flex-column justify-between'>
       <header>
-        <ul className='list mt3 mb0 mh4 pa0 flex flex-column flex-row-ns justify-between items-center white-80 f3 lh-copy fw7'>
+        <ul className='list mt3 mb0 mh4 pa0 flex flex-row justify-between items-center white-80 f3 lh-copy fw7'>
           <li>
             <p className='ma0'>ZAYLAND</p>
           </li>

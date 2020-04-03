@@ -13,17 +13,7 @@ const Home = () => {
             className='w-50-ns w-100'
           />
         </div>
-        <div className='w-100 w-50-ns pa3-ns flex justify-center items-center white-80'>
-          <a
-            href='https://snd.click/5eh5htMe?embed=1'
-            className='link hover-blue white-80'
-            rel='noopener noreferrer'
-            target='_blank'
-          >
-            <h2>Listen to 'Nobody Knows'</h2>
-          </a>
-        </div>
-        <div className='flex justify-center items-center  pa2'>
+        <div className='flex justify-center items-center mt4 pa2'>
           {platforms.map((platform, idx) => (
             <div key={platform.title} className='h-25 mh3'>
               <a href={platform.link} rel='noopener noreferrer' target='_blank'>
