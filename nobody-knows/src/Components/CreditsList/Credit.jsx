@@ -22,16 +22,17 @@ const Credit = ({
               <p className='ma0 f4'>{story && story}</p>
               {!story && (
                 <>
-                  <div className='mv4 w-75-l w-100 mh0-l bt b--white-80 bw2' />{' '}
+                  <div className='mv4 w-75-l w-100 mh0-l bt b--white-80 bw2 db dn-l' />{' '}
                   <p className='ma0 f4'>{end}</p>{' '}
                 </>
               )}
             </div>
             {producers && (
-              <div className='pl7-l mt4'>
-                <p className='f5 fw7 bb b--white-80 '>
+              <div className='pl7-ns mt4 ml6 ml2-ns '>
+                <p className='f5 fw7 ma0'>
                   {producers.length > 1 ? 'PRODUCERS' : 'PRODUCER'}{' '}
                 </p>
+                <div className='bb b--white-80 mt1' />
                 <p className='f5'>
                   {producers.map((producer, idx) => (
                     <React.Fragment key={idx}>{producer}&nbsp;</React.Fragment>

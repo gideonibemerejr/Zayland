@@ -102,7 +102,7 @@ export function getFullAlbumCredits() {
       songTitle: 'What U Know',
       story: `“What U Know” is simply me talking my shit, and is something to play when you’re in a mood where you’re carefree or chasing the feeling of being unbothered. At the end of the song there’s a snippet of an unreleased song coming out later this year as well. Something to look forward to, and also ties the project back together before going into “Love Games & Interludes”`,
       trackNo: '3',
-      producers: ['The Keyz,', 'Sonic major']
+      producers: ['The Keyz,', 'Sonic Major']
     },
     {
       songTitleSrc: love,

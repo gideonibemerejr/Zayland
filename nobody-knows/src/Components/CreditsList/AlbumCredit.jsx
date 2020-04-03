@@ -24,7 +24,7 @@ const AlbumCredit = () => {
           {Object.keys(albumCredits.credits).map((key, idx) => (
             <div
               key={idx}
-              className='flex flex-column white-80 w-50-l w-100 pl7-l'
+              className='flex flex-column white-80 w-50-ns w-100 pl7-l pr4-m'
             >
               <p className='f5 fw7 mb1 bb b--white-80'>{key.toUpperCase()}</p>
               <p className='f6'>{albumCredits.credits[key]}</p>
