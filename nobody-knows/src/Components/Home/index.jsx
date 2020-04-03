@@ -28,7 +28,7 @@ const Home = () => {
             <div key={platform.title} className='h-25 mh3'>
               <a href={platform.link} rel='noopener noreferrer' target='_blank'>
                 <img
-                  className=' h3-ns w3-ns h2 w2 dib'
+                  className='h3-ns w3-ns h2 w2 dib'
                   src={platform.iconSrc}
                   alt=''
                 />
