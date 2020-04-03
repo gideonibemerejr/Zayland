@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const Nav = ({ toggleMenu }) => {
   return (
     <nav className='w-100 z-2'>
-      <ul className='list pa0 mt1 mb0 mh4 flex flex-row justify-between items-start white-80 f3  lh-copy fw7'>
+      <ul className='list pa0 mt1 mb0 mh4 flex flex-row justify-between items-center-l white-80 f3  lh-copy fw7'>
         <li>
           <Link to='/home' className='link white-80'>
             <h1 className='ma0 f2 f3-l'>ZAYLAND</h1>
