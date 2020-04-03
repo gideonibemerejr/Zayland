@@ -36,7 +36,7 @@ class HomePage extends Component {
           <Nav toggleMenu={this.toggleMenu} />
           <Switch>
             <Route exact path='/home' component={Home} />
-            <Route exact path='/home/credits' component={Credits} />
+            <Route path='/home/credits' component={Credits} />
           </Switch>
         </div>
       </>
