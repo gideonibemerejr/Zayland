@@ -23,7 +23,7 @@ const Menu = ({ toggleMenu }) => {
                 CREDITS
               </Link>
             </li>
-            {/* <li>
+            <li>
               <a
                 className='link white-80 hover-blue pointer'
                 href='https://www.youtube.com/channel/UCBWY9m5zQa7bIoy7ZK8QAuQ'
@@ -32,7 +32,7 @@ const Menu = ({ toggleMenu }) => {
               >
                 WATCH
               </a>
-            </li> */}
+            </li>
           </ul>
         </div>
       </div>

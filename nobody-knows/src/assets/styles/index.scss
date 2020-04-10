@@ -46,3 +46,12 @@ div.menu-button {
   transition: all 0.4s ease-in-out;
   line-height: 1.4;
 }
+.bg-zay {
+  min-height: 100vh;
+  height: 100%;
+
+  background-image: url('http://api.thumbr.it/whitenoise-361x370.png?');
+  background: #000000;
+  background-position: center;
+  background-repeat: repeat;
+}
