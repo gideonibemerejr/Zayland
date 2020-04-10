@@ -1,13 +1,6 @@
-import React from 'react';
+import React from 'react'
 
-const Credit = ({
-  songTitleSrc,
-  songTitle,
-  story,
-  trackNo,
-  producers,
-  end
-}) => {
+const Credit = ({ songTitleSrc, songTitle, story, trackNo, producers }) => {
   return (
     <section className='white-80 mt4 w-100 flex flex-column items-center justify-center'>
       <p className='w-75-l w-100 tl f3 fw7 mb4'>NK - TRACK {'0' + trackNo}</p>
@@ -20,12 +13,6 @@ const Credit = ({
           <div className='w-100 mt3-l mt2'>
             <div className='w-100'>
               <p className='ma0 f4'>{story && story}</p>
-              {!story && (
-                <>
-                  <div className='mv4 w-75-l w-100 mh0-l bt b--white-80 bw2 db dn-l' />{' '}
-                  <p className='ma0 f4'>{end}</p>{' '}
-                </>
-              )}
             </div>
             {producers && (
               <div className='pl7-ns mt4 ml6 ml2-ns '>
@@ -44,7 +31,7 @@ const Credit = ({
         </div>
       </article>
     </section>
-  );
-};
+  )
+}
 
-export default Credit;
+export default Credit

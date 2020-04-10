@@ -1,5 +1,5 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Menu = ({ toggleMenu }) => {
   return (
@@ -26,7 +26,7 @@ const Menu = ({ toggleMenu }) => {
             <li>
               <a
                 className='link white-80 hover-blue pointer'
-                href='https://www.youtube.com/channel/UCBWY9m5zQa7bIoy7ZK8QAuQ'
+                href='https://www.youtube.com/watch?v=8YCQuLXMNWI'
                 rel='noopener noreferrer'
                 target='_blank'
               >
@@ -37,7 +37,7 @@ const Menu = ({ toggleMenu }) => {
         </div>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default Menu;
+export default Menu
