@@ -1,5 +1,5 @@
 import React from 'react'
-import { getFullAlbumCredits, getAlbumCredits } from '../../data'
+import { getFullAlbumCredits } from '../../data'
 import { AlbumCredit, Credit } from '../index'
 
 const credits = getFullAlbumCredits()
