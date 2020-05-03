@@ -1,19 +1,18 @@
-import React from 'react';
-import { getFullAlbumCredits, getAlbumCredits } from '../../data';
-import { AlbumCredit, Credit } from '../index';
+import React from 'react'
+import { getFullAlbumCredits } from '../../data'
+import { AlbumCredit, Credit } from '../index'
 
-const credits = getFullAlbumCredits();
-const albumCredit = getAlbumCredits();
+const credits = getFullAlbumCredits()
 
 const CreditsList = () => {
   return (
     <div className='ma4'>
       <AlbumCredit />
-      {credits.map(credit => (
-        <Credit {...credit} key={credit.trackNo} end={albumCredit.end} />
+      {credits.map((credit) => (
+        <Credit {...credit} key={credit.trackNo} />
       ))}
     </div>
-  );
-};
+  )
+}
 
-export default CreditsList;
+export default CreditsList
