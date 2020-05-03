@@ -1,8 +1,8 @@
 import React from 'react';
 import { getAlbums, getArtistPlatforms } from '../../data';
 
-const albums = getAlbums();
 const platforms = getArtistPlatforms();
+const albums = getAlbums();
 const Listen = () => {
   return (
     <main className='w-100 vh-75-l flex flex-column justify-center items-center'>

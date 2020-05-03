@@ -5,7 +5,7 @@ import { Switch, Route } from 'react-router-dom';
 
 class HomePage extends Component {
   state = {
-    isMenuOpen: false
+    isMenuOpen: false,
   };
 
   toggleMenu = () => {

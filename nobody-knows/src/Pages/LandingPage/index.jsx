@@ -7,6 +7,7 @@ const LandingPage = ({ loading }) => {
       <h1>Zayland</h1>
     </div>
   ) : (
+    
     <div className='landingpage--container flex flex-column justify-between items-center'>
       <header className='w-100'>
         <ul className='list mt3 mb0 mh4 pa0 flex flex-row justify-between items-center white-80 f3-ns f4 lh-copy fw7'>
