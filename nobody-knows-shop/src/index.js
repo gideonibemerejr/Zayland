@@ -3,10 +3,17 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import Client from 'shopify-buy';
+import '../node_modules/tachyons/css/tachyons.min.css';
+
+const client = Client.buildClient({
+  storefrontAccessToken: 'd178c1baf5dc2f134fd6bc13b1ce61fa',
+  domain: 'zayland-store.myshopify.com',
+});
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <App client={client} />
   </React.StrictMode>,
   document.getElementById('root')
 );
