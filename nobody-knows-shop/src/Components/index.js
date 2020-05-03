@@ -4,10 +4,3 @@ export { default as Product } from './Product';
 export { default as ProductsList } from './ProductsList';
 export { default as ProductDetail } from './ProductDetail';
 export { default as VariantSelector } from './VariantSelector';
-
-LineItem.js
-Cart.js
-Product.js
-ProductsList.js
-ProductDetail.js
-VariantSelector.js
