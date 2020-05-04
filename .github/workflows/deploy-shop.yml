@@ -1,0 +1,21 @@
+name: Zayland Shop Deployment
+on:
+  push:
+    paths:
+      - 'nobody-knows-shop/**'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-east-1
+      - name: Deploy Shop
+        run: cd nobody-knows-shop && npm install && npm run build && aws s3 sync build/ s3://${{ secrets.SHOP_BUCKET }} --delete
+      - name: Update Cache Control for index.html
+        run: aws s3 cp s3://${{ secrets.SHOP_BUCKET }}/index.html s3://${{ secrets.SHOP_BUCKET }}/index.html --metadata-directive REPLACE --cache-control no-cache
