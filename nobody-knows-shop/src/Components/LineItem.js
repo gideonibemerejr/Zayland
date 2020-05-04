@@ -15,7 +15,7 @@ class LineItem extends Component {
   render() {
     return (
       <li className='h-25 flex  w-50-ns w-85 ma0 pa0'>
-        <div className=' h-100 w-40'>
+        <div className=' h-100 w-40 '>
           {this.props.line_item.variant.image ? (
             <figure className='ma0 pa0 '>
               <img
