@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import { VariantSelector } from './index';
 
 class Product extends Component {
-  state = {
-    ...this.getInitialState(),
-  };
+  constructor(props) {
+    super(props);
 
+    this.state = {
+      ...this.getInitialState(),
+    };
+  }
   getInitialState = () => {
     let defaultOptionValues = {};
     this.props.product.options.forEach((selector) => {
@@ -53,42 +55,28 @@ class Product extends Component {
   render() {
     let variantImages = this.props.product.images;
     let variant = this.state.selectedVariant || this.props.product.variants[0];
-    let variantQuantity = this.state.selectedVariantQuantity || 1;
 
-    let variantSelectors = this.props.product.options.map((option) => {
-      return (
-        <div
-          key={option.id.toString()}
-          className='flex flex-column justify-center-ns items-center-ns  mh4 w-25'
-        >
-          <label className='mb2 f5 f3-ns'>SIZE</label>
-          <VariantSelector
-            handleOptionChange={this.handleOptionChange}
-            option={option}
-          />
-        </div>
-      );
-    });
     return (
-      <article class='fl w-100 w-50-m  w-25-ns pa2-ns'>
-        <div class='aspect-ratio aspect-ratio--1x1'>
-          {/* <img style="background-image:url(http://mrmrs.github.io/images/0006.jpg);" 
-      class="db bg-center cover aspect-ratio--object" /> */}
-          {this.props.product.images.length && (
-            <img
-              className='db bg-center cover aspect-ratio--object'
-              src={variantImages[this.state.currentImage].src}
-              alt={`${this.props.product.title} product shot`}
-            />
-          )}
-        </div>
+      <article className='fl w-100 w-50-m w-40-ns pa5-ns'>
         <Link
-          onClick={this.props.updateActiveProduct(this.props.product.title)}
-          to={`/products/${this.props.product.title}`}
-          class='ph2 ph0-ns pb3 link db'
+          to={`/products/${this.props.product.id}`}
+          className='ph2 ph0-ns pb3 link db'
         >
-          <h3 class='f5 f4-ns mb0 black-90'> {this.props.product.title}</h3>
-          <h3 class='f6 f5 fw4 mt2 black-60'>${variant.price | 0}</h3>
+          <div className='aspect-ratio aspect-ratio--1x1'>
+            {this.props.product.images.length && (
+              <img
+                className='db bg-center cover aspect-ratio--object'
+                src={variantImages[this.state.currentImage].src}
+                alt={`${this.props.product.title} product shot`}
+              />
+            )}
+          </div>
+
+          <h3 className='tc f5 f4-ns fw7 mb0 black-90'>
+            {' '}
+            {this.props.product.title}
+          </h3>
+          <h3 className='tc f5 fw5 mt2 black-60'>${variant.price | 0}</h3>
         </Link>
       </article>
 

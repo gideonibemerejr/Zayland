@@ -4,7 +4,7 @@ class VariantSelector extends Component {
   render() {
     return (
       <select
-        className=' black bg-transparent pl3 quantity'
+        className='black fw5 bg-transparent pl3 ba0'
         name={this.props.option.name}
         key={this.props.option.name}
         onChange={this.props.handleOptionChange}

@@ -4,3 +4,4 @@ export { default as Product } from './Product';
 export { default as ProductsList } from './ProductsList';
 export { default as ProductDetail } from './ProductDetail';
 export { default as VariantSelector } from './VariantSelector';
+export { default as ScrollToTop } from './ScrollToTop';

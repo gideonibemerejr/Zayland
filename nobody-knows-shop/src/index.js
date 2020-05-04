@@ -5,7 +5,8 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import Client from 'shopify-buy';
 import '../node_modules/tachyons/css/tachyons.min.css';
-import { Router } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { ScrollToTop } from './Components';
 
 const client = Client.buildClient({
   storefrontAccessToken: 'd178c1baf5dc2f134fd6bc13b1ce61fa',
@@ -15,6 +16,7 @@ const client = Client.buildClient({
 ReactDOM.render(
   <React.StrictMode>
     <Router>
+      <ScrollToTop />
       <App client={client} />
     </Router>
   </React.StrictMode>,

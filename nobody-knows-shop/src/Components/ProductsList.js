@@ -16,7 +16,11 @@ class ProductList extends Component {
         />
       );
     });
-    return <div className='w-100 pa2-ns flex flex-wrap'>{products}</div>;
+    return (
+      <div className='w-100 pa2-ns flex flex-wrap justify-around'>
+        {products}
+      </div>
+    );
   }
 }
 

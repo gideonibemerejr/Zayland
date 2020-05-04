@@ -1,7 +1,9 @@
-import React from 'react';
-import { Switch, Route } from 'react-router-dom';
-import { ProductDetail, Cart } from './Components';
-import { HomePage, ProductPage } from './Pages';
+import React, { Component } from 'react';
+import { Switch, Route, Link } from 'react-router-dom';
+
+import { grainedService } from './utils';
+import { HomePage, ProductPage, CartPage } from './Pages';
+
 class App extends Component {
   state = {
     isCartOpen: false,
@@ -9,6 +11,15 @@ class App extends Component {
     products: [],
     shop: {},
     activeProduct: '',
+  };
+  options = {
+    animate: true,
+    patternWidth: 485.5,
+    patternHeight: 485.5,
+    grainOpacity: 0.15,
+    grainDensity: 1,
+    grainWidth: 0.75,
+    grainHeight: 0.75,
   };
 
   componentWillMount() {
@@ -29,6 +40,9 @@ class App extends Component {
         shop: res,
       });
     });
+  }
+  componentDidMount() {
+    grainedService.grained('#grained', this.options);
   }
 
   addVariantToCart = (variantId, quantity) => {
@@ -81,103 +95,114 @@ class App extends Component {
     });
   };
 
-  setActiveProduct = (productTitle) => {
+  setActiveProduct = (productId) => {
     let activeProduct = this.state.products.filter(
-      (product) => product.title === productTitle
+      (product) => product.id === productId
     );
 
-    this.setState({ activeProduct });
+    this.setActiveProduct(activeProduct);
   };
 
-  renderProductPage = (activeProduct) => {
+  renderCartPage = () => {
     return (
-      <ProductDetail
-        addVariantToCart={this.addVariantToCart}
-        client={this.props.client}
-        key={activeProduct.id.toString()}
-        product={activeProduct}
+      <CartPage
+        checkout={this.state.checkout}
+        isCartOpen={this.state.isCartOpen}
+        handleCartClose={this.handleCartClose}
+        updateQuantityInCart={this.updateQuantityInCart}
+        removeLineItemInCart={this.removeLineItemInCart}
       />
     );
   };
-
   render() {
     return (
-      <div className='home-grid'>
-        <nav className='dt w-100 border-box pa3 ph5-ns'>
-          <a
-            className='dtc v-mid mid-gray link dim w-25'
-            href='https://www.zaylandxx.com'
-            title='Home'
-          >
-            ZAYLAND
-          </a>
-          <div className='dtc v-mid w-75 tr'>
-            <a
-              className='link dim dark-gray f6 f5-ns dib mr3 mr4-ns'
-              href='https://www.zaylandxx.com/credits'
-              title='Credits'
+      <>
+        {this.state.isCartOpen && this.renderCartPage()}
+        <div id='grained' className='home-grid'>
+          <nav className='db dt-l w-100 border-box pa3 ph5-l relative'>
+            <Link
+              className='db dtc-l v-mid mid-gray link dim w-100 w-25-l tc tl-l mb2 mb0-l'
+              to='/'
+              title='Home'
             >
-              Credits
-            </a>
-            <a
-              rel='noopener noreferrer'
-              target='_blank'
-              className='link dim dark-gray f6 f5-ns dib mr3 mr4-ns'
-              href='https://www.youtube.com/watch?v=8YCQuLXMNWI'
-              title='Watch'
-            >
-              Watch
-            </a>
-            <a
-              className='link dim dark-gray f6 f5-ns dib mr3 mr4-ns'
-              href='#'
-              title='About'
-            >
-              Cart
-            </a>
-          </div>
-        </nav>
-        {/* {!this.state.isCartOpen && (
-          <div className='flex justify-center items-center mh4-l mt4-l mt2 '>
-            <button
-              className='App__view-cart black f3 fw7 tracked'
-              onClick={() => this.setState({ isCartOpen: true })}
-            >
-              CART
-            </button>
-          </div>
-        )} */}
+              <h1 className='ma0 f3 f3-l'>ZAYLAND</h1>
+            </Link>
+            <div className='db dtc-l v-mid w-100 w-75-l tc tr-l'>
+              <a
+                className='link dim dark-gray f6 f5-l  fw5 dib mr3 mr4-l'
+                href='https://www.zaylandxx.com/'
+                title='Music'
+              >
+                MUSIC
+              </a>
+              <a
+                className='link dim dark-gray f6 f5-l fw5 dib mr3 mr4-l'
+                href='https://www.zaylandxx.com/credits'
+                title='Credits'
+              >
+                CREDITS
+              </a>
+              <a
+                rel='noopener noreferrer'
+                target='_blank'
+                className='link dim dark-gray f6 f5-l fw5 dib mr3 mr4-l'
+                href='https://www.youtube.com/watch?v=8YCQuLXMNWI'
+                title='Watch'
+              >
+                WATCH
+              </a>
+              <div
+                className='pointer link dim dark-gray f6 f5-l fw5 dib '
+                onClick={() =>
+                  this.setState({ isCartOpen: !this.state.isCartOpen })
+                }
+                title='Cart'
+              >
+                CART
+              </div>
+            </div>
+          </nav>
 
-        <Switch>
-          <Route
-            path='/products/:id'
-            render={this.renderProductPage(this.state.activeProduct)}
-          />
-          <Route
-            path='/cart'
-            render={() => (
-              <CartPage
-                checkout={this.state.checkout}
-                isCartOpen={this.state.isCartOpen}
-                handleCartClose={this.handleCartClose}
-                updateQuantityInCart={this.updateQuantityInCart}
-                removeLineItemInCart={this.removeLineItemInCart}
+          {!this.state.isCartOpen && (
+            <Switch>
+              <Route
+                path='/products/:id'
+                render={({ match }) => (
+                  <ProductPage
+                    match={match}
+                    addVariantToCart={this.addVariantToCart}
+                    client={this.props.client}
+                  />
+                )}
               />
-            )}
-          />
-          <Route
-            path='/'
-            render={() => (
-              <HomePage
-                setActiveProduct={this.setActiveProduct}
-                products={this.state.products}
-                client={this.props.client}
-                addVariantToCart={this.addVariantToCart}
+              <Route
+                path='/cart'
+                render={() => (
+                  <CartPage
+                    checkout={this.state.checkout}
+                    isCartOpen={this.state.isCartOpen}
+                    handleCartClose={this.handleCartClose}
+                    updateQuantityInCart={this.updateQuantityInCart}
+                    removeLineItemInCart={this.removeLineItemInCart}
+                  />
+                )}
               />
-            )}
-          />
-        </Switch>
-      </div>
+              <Route
+                exact
+                path='/'
+                render={() => (
+                  <HomePage
+                    setActiveProduct={this.setActiveProduct}
+                    products={this.state.products}
+                    client={this.props.client}
+                    addVariantToCart={this.addVariantToCart}
+                  />
+                )}
+              />
+            </Switch>
+          )}
+        </div>
+      </>
     );
   }
 }
