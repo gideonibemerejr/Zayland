@@ -3,11 +3,12 @@ import Product from './Product';
 
 class ProductList extends Component {
   state = {};
-    
+
   render() {
     let products = this.props.products.map((product) => {
       return (
         <Product
+          setActiveProduct={this.props.setActiveProduct}
           addVariantToCart={this.props.addVariantToCart}
           client={this.props.client}
           key={product.id.toString()}

@@ -11,11 +11,10 @@ class ProductDetail extends Component {
     this.props.product.options.forEach((selector) => {
       defaultOptionValues[selector.name] = selector.values[0].value;
     });
-    this.state = { selectedOptions: defaultOptionValues, currentImage: 0 };
-
-    this.handleOptionChange = this.handleOptionChange.bind(this);
-    this.handleQuantityChange = this.handleQuantityChange.bind(this);
-    this.findImage = this.findImage.bind(this);
+    this.state = {
+      selectedOptions: defaultOptionValues,
+      currentImage: 0,
+    };
   }
   handleImageNextClick = () => {
     if (this.state.currentImage === 0) {
@@ -83,7 +82,12 @@ class ProductDetail extends Component {
       );
     });
 
-    return (
+    return this.props.product ? (
+      <div className='vh-100 w-100 flex justify-center items-center'>
+        <h1>Loading</h1>
+        <Loader type='Oval' color='white' height={30} width={30} />
+      </div>
+    ) : (
       <div className='flex flex-column justify-between items-center'>
         <div className='flex flex-row-ns  w-100 mw8 items-center justify-around'>
           <div className='pointer' onClick={this.handleImagePrevClick}>

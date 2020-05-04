@@ -1,7 +1,7 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import { ProductDetail, Cart } from './Components';
-import { HomePage } from './Pages';
+import { HomePage, ProductPage } from './Pages';
 class App extends Component {
   state = {
     isCartOpen: false,
@@ -89,6 +89,17 @@ class App extends Component {
     this.setState({ activeProduct });
   };
 
+  renderProductPage = (activeProduct) => {
+    return (
+      <ProductDetail
+        addVariantToCart={this.addVariantToCart}
+        client={this.props.client}
+        key={activeProduct.id.toString()}
+        product={activeProduct}
+      />
+    );
+  };
+
   render() {
     return (
       <div className='home-grid'>
@@ -140,12 +151,12 @@ class App extends Component {
         <Switch>
           <Route
             path='/products/:id'
-            render={() => <ProductDetail product={this.state.activeProduct} />}
+            render={this.renderProductPage(this.state.activeProduct)}
           />
           <Route
             path='/cart'
             render={() => (
-              <Cart
+              <CartPage
                 checkout={this.state.checkout}
                 isCartOpen={this.state.isCartOpen}
                 handleCartClose={this.handleCartClose}
@@ -158,6 +169,7 @@ class App extends Component {
             path='/'
             render={() => (
               <HomePage
+                setActiveProduct={this.setActiveProduct}
                 products={this.state.products}
                 client={this.props.client}
                 addVariantToCart={this.addVariantToCart}
