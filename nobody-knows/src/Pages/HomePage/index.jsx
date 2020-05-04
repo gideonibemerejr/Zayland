@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import { Nav, Menu, Home, Credits } from '../../Components';
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route, Redirect } from 'react-router-dom';
 
 class HomePage extends Component {
   state = {
@@ -35,8 +35,9 @@ class HomePage extends Component {
         <div className='homepage--container pa2 flex flex-column items-center'>
           <Nav toggleMenu={this.toggleMenu} />
           <Switch>
-            <Route exact path='/home' component={Home} />
-            <Route path='/home/credits' component={Credits} />
+            <Route exact path='/' component={Home} />
+            <Route path='/credits' component={Credits} />
+            <Redirect to='/' />
           </Switch>
         </div>
       </>

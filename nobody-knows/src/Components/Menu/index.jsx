@@ -1,5 +1,5 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Menu = ({ toggleMenu }) => {
   return (
@@ -11,15 +11,12 @@ const Menu = ({ toggleMenu }) => {
         <div className='h-100 flex flex-column justify-center items-center mv0 mx-auto z-2 '>
           <ul className='list pa0 ma0 flex flex-column justify-between items-center white-80 f2 f1-ns lh-copy fw7'>
             <li>
-              <Link className='link white-80 hover-blue pointer ' to='/home'>
+              <Link className='link white-80 hover-blue pointer ' to='/'>
                 HOME
               </Link>
             </li>
             <li>
-              <Link
-                className='link white-80 hover-blue pointer '
-                to='/home/credits'
-              >
+              <Link className='link white-80 hover-blue pointer ' to='/credits'>
                 CREDITS
               </Link>
             </li>
@@ -37,7 +34,7 @@ const Menu = ({ toggleMenu }) => {
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default Menu
+export default Menu;
