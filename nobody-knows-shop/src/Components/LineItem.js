@@ -14,8 +14,8 @@ class LineItem extends Component {
   };
   render() {
     return (
-      <li className='h-25 flex w-50-ns w-85 ma0 pa0'>
-        <div className=' h-100 w-40-l w-30'>
+      <li className='h-25 flex  w-50-ns w-85 ma0 pa0'>
+        <div className=' h-100 w-40'>
           {this.props.line_item.variant.image ? (
             <figure className='ma0 pa0 '>
               <img
@@ -26,13 +26,14 @@ class LineItem extends Component {
             </figure>
           ) : null}
         </div>
-        <div className='flex flex-column items-left justify-between ml4 w-30'>
+
+        <div className='flex flex-column items-left justify-between ml4 w-100'>
           <div className='dib mb3 w-100 flex flex-column'>
-            <h2 className='f3'>{this.props.line_item.title}</h2>
-            <h3 className=''>{this.props.line_item.variant.title}</h3>
+            <h2 className='f3-l f6 lh-copy'>{this.props.line_item.title}</h2>
+            <h3 className='f3-l f6'>{this.props.line_item.variant.title}</h3>
           </div>
         </div>
-        <div className='w-30 flex flex-column justify-between items-center'>
+        <div className='w-100 flex flex-column justify-between items-center'>
           <div className='flex flex-column'>
             <label className='mb3'>Quantity</label>
             <div className='dib mb3 w-100 flex justify-between items-center'>
