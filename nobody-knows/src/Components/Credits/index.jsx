@@ -1,7 +1,12 @@
-import React from 'react'
-import { CreditsList } from '../index'
+import React, { useEffect } from 'react';
+import { CreditsList } from '../index';
 
-const Credits = () => {
+const Credits = ({ setCurrentPage }) => {
+  useEffect(() => {
+    console.log('setting');
+    setCurrentPage('CREDITS');
+  }, [setCurrentPage]);
+
   return (
     <div className='w-100 h-100'>
       <CreditsList />
@@ -9,7 +14,7 @@ const Credits = () => {
         ©{new Date().getFullYear()} Zay's Land, LLC
       </footer>
     </div>
-  )
-}
+  );
+};
 
-export default Credits
+export default Credits;

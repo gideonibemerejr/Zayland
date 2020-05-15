@@ -1,7 +1,7 @@
 import React from 'react';
-import { getAlbums, getArtistPlatforms } from '../../data';
+import { getAlbums, getNobodyKnowsPlatforms } from '../../data';
 
-const platforms = getArtistPlatforms();
+const platforms = getNobodyKnowsPlatforms();
 const albums = getAlbums();
 const Listen = () => {
   return (

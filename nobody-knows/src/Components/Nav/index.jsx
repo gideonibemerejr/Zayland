@@ -14,6 +14,20 @@ const Nav = ({ toggleMenu }) => {
       <div className='db dtc-l v-mid w-100 w-75-l tc tr-l'>
         <Link
           className='link dim white-80 f6 f5-l fw5 dib mr3 mr4-l'
+          to='/'
+          title='Home'
+        >
+          HOME
+        </Link>
+        <Link
+          className='link dim white-80 f6 f5-l fw5 dib mr3 mr4-l'
+          to='/nobody-knows'
+          title='Nobody Knows'
+        >
+          NOBODY KNOWS
+        </Link>
+        <Link
+          className='link dim white-80 f6 f5-l fw5 dib mr3 mr4-l'
           to='/credits'
           title='Credits'
         >

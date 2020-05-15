@@ -1,18 +1,18 @@
 import React, { useEffect } from 'react';
-import { getRemixesPlatforms } from '../../data';
+import { getNobodyKnowsPlatforms } from '../../data';
 
-const platforms = getRemixesPlatforms();
-const Home = ({ setCurrentPage }) => {
+const platforms = getNobodyKnowsPlatforms();
+const NobodyKnows = ({ setCurrentPage }) => {
   useEffect(() => {
     console.log('setting');
-    setCurrentPage('HOME');
+    setCurrentPage('NOBODY KNOWS');
   }, [setCurrentPage]);
   return (
     <main className='w-100 vh-75 h-100-l flex justify-center items-center'>
       <section className='w-100 flex flex-column  justify-center items-center mh5-l pa2 pa0-ns'>
         <div className='w-100 w-75-l h-75 mb2 flex justify-center items-center'>
           <img
-            src='https://zayland-assets.s3.amazonaws.com/images/NKREMIXESv00006-min.jpg'
+            src='https://zayland-assets.s3.amazonaws.com/images/Zayland_NobodyKnows_FinalCover.png'
             alt=''
             className='w-50-ns w-100'
           />
@@ -35,4 +35,4 @@ const Home = ({ setCurrentPage }) => {
   );
 };
 
-export default Home;
+export default NobodyKnows;

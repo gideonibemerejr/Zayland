@@ -1,13 +1,13 @@
-import appleMusic from '../assets/images/appleMusic.svg'
-import spotify from '../assets/images/spotify.png'
-import tidal from '../assets/images/tidal.svg'
-import googlePlay from '../assets/images/googlePlay.png'
-import soundcloud from '../assets/images/soundcloud.png'
-import fuck from '../assets/images/songTitles/fuck.png'
-import blue from '../assets/images/songTitles/blue.png'
-import what from '../assets/images/songTitles/what.png'
-import love from '../assets/images/songTitles/love.png'
-import summers from '../assets/images/songTitles/summers.png'
+import appleMusic from '../assets/images/appleMusic.svg';
+import spotify from '../assets/images/spotify.png';
+import tidal from '../assets/images/tidal.svg';
+import googlePlay from '../assets/images/googlePlay.png';
+import soundcloud from '../assets/images/soundcloud.png';
+import fuck from '../assets/images/songTitles/fuck.png';
+import blue from '../assets/images/songTitles/blue.png';
+import what from '../assets/images/songTitles/what.png';
+import love from '../assets/images/songTitles/love.png';
+import summers from '../assets/images/songTitles/summers.png';
 
 export function getAlbums() {
   return [
@@ -46,10 +46,10 @@ export function getAlbums() {
       title: 'Moon',
       artists: ['Zayland'],
     },
-  ]
+  ];
 }
 
-export function getArtistPlatforms() {
+export function getNobodyKnowsPlatforms() {
   return [
     {
       link: 'https://soundcloud.com/zaylandxx/sets/nobody-knows-ep',
@@ -78,7 +78,39 @@ export function getArtistPlatforms() {
       title: 'Apple Music',
       iconSrc: appleMusic,
     },
-  ]
+  ];
+}
+
+export function getRemixesPlatforms() {
+  return [
+    {
+      link: 'https://soundcloud.com/thenuwavesound/sets/nkremixes',
+      title: 'Soundcloud',
+      iconSrc: soundcloud,
+    },
+    {
+      link: 'https://open.spotify.com/album/4oAXayGFpI3fu2lANITsIJ',
+      title: 'Spotify',
+      iconSrc: spotify,
+    },
+    {
+      link: 'https://tidal.com/browse/album/140737677',
+      title: 'Tidal',
+      iconSrc: tidal,
+    },
+    {
+      link:
+        'https://play.google.com/store/music/album/Zayland_Nobody_Knows_The_Remixes?id=Bzgegybuxruyk35rkugjswj436u&hl=en_US',
+      title: 'Google Play',
+      iconSrc: googlePlay,
+    },
+    {
+      link:
+        'https://music.apple.com/us/album/nobody-knows-the-remixes/1512557872',
+      title: 'Apple Music',
+      iconSrc: appleMusic,
+    },
+  ];
 }
 
 export function getFullAlbumCredits() {
@@ -118,7 +150,7 @@ export function getFullAlbumCredits() {
       trackNo: '5',
       producers: ['Tokyo Ave,', 'Israel,', 'AEBEATS'],
     },
-  ]
+  ];
 }
 
 export function getAlbumCredits() {
@@ -137,5 +169,5 @@ export function getAlbumCredits() {
       MARKETING: 'ZAYLAND & JOAQU.N',
       'RELEASED BY': 'THE NU WAVE SOUND',
     },
-  }
+  };
 }

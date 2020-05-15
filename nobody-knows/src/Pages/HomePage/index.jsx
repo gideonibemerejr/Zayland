@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 
-import { Nav, Menu, Home, Credits } from '../../Components';
+import { Nav, Menu, Home, Credits, NobodyKnows } from '../../Components';
 import { Switch, Route, Redirect } from 'react-router-dom';
 
 class HomePage extends Component {
   state = {
     isMenuOpen: false,
+    currentPage: 'HOME',
   };
 
   toggleMenu = () => {
@@ -13,7 +14,9 @@ class HomePage extends Component {
       this.rotateIcon();
     });
   };
-
+  setCurrentPage = (currentPage) => {
+    this.setState({ currentPage });
+  };
   rotateIcon = () => {
     const plus = document.querySelector('#menu-icon');
 
@@ -32,11 +35,31 @@ class HomePage extends Component {
     return (
       <>
         {this.state.isMenuOpen && this.renderMenu()}
-        <div className='homepage--container pa2 flex flex-column items-center'>
+
+        <div
+          className={`homepage--container ${
+            this.state.currentPage === 'HOME' ? `remixes-bg` : `nobody-knows-bg`
+          }
+           pa2 flex flex-column items-center`}
+        >
           <Nav toggleMenu={this.toggleMenu} />
           <Switch>
-            <Route exact path='/' component={Home} />
-            <Route path='/credits' component={Credits} />
+            <Route
+              exact
+              path='/'
+              render={() => <Home setCurrentPage={this.setCurrentPage} />}
+            />
+            <Route
+              path='/nobody-knows'
+              render={() => (
+                <NobodyKnows setCurrentPage={this.setCurrentPage} />
+              )}
+            />
+            <Route
+              path='/credits'
+              render={() => <Credits setCurrentPage={this.setCurrentPage} />}
+            />
+
             <Redirect to='/' />
           </Switch>
         </div>
