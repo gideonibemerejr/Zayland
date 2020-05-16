@@ -14,7 +14,6 @@ class ProductDetail extends Component {
   componentDidMount() {
     let productId = this.props.match.params.id;
     this.props.client.product.fetch(productId).then((product) => {
-      console.log(product);
       let defaultOptionValues = {};
       product.options.forEach((selector) => {
         defaultOptionValues[selector.name] = selector.values[0].value;
@@ -44,6 +43,7 @@ class ProductDetail extends Component {
   };
 
   handleOptionChange = (event) => {
+    console.log('working');
     const target = event.target;
     let selectedOptions = this.state.selectedOptions;
     selectedOptions[target.name] = target.value;
@@ -54,7 +54,7 @@ class ProductDetail extends Component {
     );
 
     this.setState({
-      selectedVariant: selectedVariant,
+      variant: selectedVariant,
       selectedVariantImage: selectedVariant.attrs.image,
     });
   };
@@ -71,6 +71,7 @@ class ProductDetail extends Component {
   // variantQuantity = this.state.selectedVariantQuantity || 1;
 
   render() {
+    console.log(this.state);
     let variantImages = this.state.product && this.state.product.images;
 
     let variantQuantity = this.state.selectedVariantQuantity || 1;

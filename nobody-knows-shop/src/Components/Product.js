@@ -9,6 +9,7 @@ class Product extends Component {
       ...this.getInitialState(),
     };
   }
+
   getInitialState = () => {
     let defaultOptionValues = {};
     this.props.product.options.forEach((selector) => {
@@ -53,6 +54,7 @@ class Product extends Component {
   };
 
   render() {
+    console.log(this.state);
     let variantImages = this.props.product.images;
     let variant = this.state.selectedVariant || this.props.product.variants[0];
 
