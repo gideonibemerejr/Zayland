@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
-import { getRemixesPlatforms } from '../../data';
+import { getLetsGoPlatforms } from '../../data';
 
-const platforms = getRemixesPlatforms();
+const platforms = getLetsGoPlatforms();
 const Home = ({ setCurrentPage }) => {
   useEffect(() => {
     console.log('setting');
@@ -9,10 +9,10 @@ const Home = ({ setCurrentPage }) => {
   }, [setCurrentPage]);
   return (
     <main className='w-100 vh-75 h-100-l flex justify-center items-center'>
-      <section className='w-100 flex flex-column  justify-center items-center mh5-l pa2 pa0-ns'>
+      <section className='w-100 flex flex-column  justify-center items-center mh5-l pa2 pa0-ns mt5-l'>
         <div className='w-100 w-75-l h-75 mb2 flex justify-center items-center'>
           <img
-            src='https://zayland-assets.s3.amazonaws.com/images/NKREMIXESv00006-min.jpg'
+            src='https://zayland-assets.s3.amazonaws.com/images/letsGoCover_sm0.jpg'
             alt=''
             className='w-50-ns w-100'
           />

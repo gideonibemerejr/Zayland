@@ -115,30 +115,30 @@ export function getRemixesPlatforms() {
 
 export function getLetsGoPlatforms() {
   return [
+    // {
+    //   link: 'https://soundcloud.com/thenuwavesound/sets/nkremixes',
+    //   title: 'Soundcloud',
+    //   iconSrc: soundcloud,
+    // },
     {
-      link: 'https://soundcloud.com/thenuwavesound/sets/nkremixes',
-      title: 'Soundcloud',
-      iconSrc: soundcloud,
-    },
-    {
-      link: 'https://open.spotify.com/album/4oAXayGFpI3fu2lANITsIJ',
+      link: 'https://open.spotify.com/album/2Sz4V0YWLjMSzeWqVpUYpY',
       title: 'Spotify',
       iconSrc: spotify,
     },
     {
-      link: 'https://tidal.com/browse/album/140737677',
+      link: 'https://tidal.com/browse/album/146828472',
       title: 'Tidal',
       iconSrc: tidal,
     },
     {
       link:
-        'https://play.google.com/store/music/album/Zayland_Nobody_Knows_The_Remixes?id=Bzgegybuxruyk35rkugjswj436u&hl=en_US',
+        'https://play.google.com/store/music/album/Zayland_Let_s_Go_feat_Randy_Class?id=Brymedclcxslrb5jz6nxnnfczoa',
       title: 'Google Play',
       iconSrc: googlePlay,
     },
     {
       link:
-        'https://music.apple.com/us/album/nobody-knows-the-remixes/1512557872',
+        'https://music.apple.com/us/album/lets-go-feat-randy-class-single/1521268708',
       title: 'Apple Music',
       iconSrc: appleMusic,
     },
