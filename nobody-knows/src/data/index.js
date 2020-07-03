@@ -113,6 +113,38 @@ export function getRemixesPlatforms() {
   ];
 }
 
+export function getLetsGoPlatforms() {
+  return [
+    {
+      link: 'https://soundcloud.com/thenuwavesound/sets/nkremixes',
+      title: 'Soundcloud',
+      iconSrc: soundcloud,
+    },
+    {
+      link: 'https://open.spotify.com/album/4oAXayGFpI3fu2lANITsIJ',
+      title: 'Spotify',
+      iconSrc: spotify,
+    },
+    {
+      link: 'https://tidal.com/browse/album/140737677',
+      title: 'Tidal',
+      iconSrc: tidal,
+    },
+    {
+      link:
+        'https://play.google.com/store/music/album/Zayland_Nobody_Knows_The_Remixes?id=Bzgegybuxruyk35rkugjswj436u&hl=en_US',
+      title: 'Google Play',
+      iconSrc: googlePlay,
+    },
+    {
+      link:
+        'https://music.apple.com/us/album/nobody-knows-the-remixes/1512557872',
+      title: 'Apple Music',
+      iconSrc: appleMusic,
+    },
+  ];
+}
+
 export function getFullAlbumCredits() {
   return [
     {

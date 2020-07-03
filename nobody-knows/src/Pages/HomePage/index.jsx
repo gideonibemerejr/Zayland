@@ -38,7 +38,7 @@ class HomePage extends Component {
 
         <div
           className={`homepage--container ${
-            this.state.currentPage === 'HOME' ? `remixes-bg` : `nobody-knows-bg`
+            this.state.currentPage === 'HOME' ? `nobody-knows-bg` : `nobody-knows-bg`
           }
            pa2 flex flex-column items-center`}
         >
