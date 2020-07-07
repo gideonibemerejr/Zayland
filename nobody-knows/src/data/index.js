@@ -145,6 +145,19 @@ export function getLetsGoPlatforms() {
   ];
 }
 
+export function getVideos() {
+  return [
+    {
+      url: 'https://www.youtube.com/embed/EM4PDkkEQn8',
+      title: `Let's Go (Official Lyric Video)`,
+    },
+    {
+      url: 'https://www.youtube.com/embed/8YCQuLXMNWI',
+      title: `Blue feat. Dee Gatti`,
+    },
+  ];
+}
+
 export function getFullAlbumCredits() {
   return [
     {

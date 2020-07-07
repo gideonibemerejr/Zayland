@@ -63,3 +63,15 @@ div.menu-button {
   background-position: center;
   background-repeat: repeat;
 }
+
+@media screen and (max-width: 30em) {
+  .player {
+    height: 50vmin;
+  }
+}
+
+@media screen and (min-width: 60em) {
+  .player {
+    height: 50vmin;
+  }
+}

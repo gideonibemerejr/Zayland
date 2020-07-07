@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { Nav, Menu, Home, Credits, NobodyKnows } from '../../Components';
+import { Nav, Menu, Home, Credits, NobodyKnows, Watch } from '../../Components';
 import { Switch, Route, Redirect } from 'react-router-dom';
 
 class HomePage extends Component {
@@ -38,7 +38,9 @@ class HomePage extends Component {
 
         <div
           className={`homepage--container ${
-            this.state.currentPage === 'HOME' ? `nobody-knows-bg` : `nobody-knows-bg`
+            this.state.currentPage === 'HOME'
+              ? `nobody-knows-bg`
+              : `nobody-knows-bg`
           }
            pa2 flex flex-column items-center`}
         >
@@ -59,7 +61,10 @@ class HomePage extends Component {
               path='/credits'
               render={() => <Credits setCurrentPage={this.setCurrentPage} />}
             />
-
+            <Route
+              path='/watch'
+              render={() => <Watch setCurrentPage={this.setCurrentPage} />}
+            />
             <Redirect to='/' />
           </Switch>
         </div>

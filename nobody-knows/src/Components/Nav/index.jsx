@@ -33,15 +33,13 @@ const Nav = ({ toggleMenu }) => {
         >
           CREDITS
         </Link>
-        <a
-          rel='noopener noreferrer'
-          target='_blank'
+        <Link
           className='link dim white-80 f6 f5-l fw5 dib mr3 mr4-l'
-          href='https://www.youtube.com/watch?v=EM4PDkkEQn8'
+          to='/watch'
           title='Watch'
         >
           WATCH
-        </a>
+        </Link>
         <a
           className='pointer link dim white-80 f6 f5-l fw5 dib '
           href='https://shop.zaylandxx.com'

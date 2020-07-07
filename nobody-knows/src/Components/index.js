@@ -5,3 +5,4 @@ export { default as NobodyKnows } from './NobodyKnows';
 export { default as Listen } from './Listen';
 export { AlbumCredit, Credit, CreditsList } from './CreditsList';
 export { default as Credits } from './Credits';
+export { default as Watch } from './Watch';
