@@ -37,7 +37,7 @@ const Nav = ({ toggleMenu }) => {
           rel='noopener noreferrer'
           target='_blank'
           className='link dim white-80 f6 f5-l fw5 dib mr3 mr4-l'
-          href='https://www.youtube.com/watch?v=8YCQuLXMNWI'
+          href='https://www.youtube.com/watch?v=EM4PDkkEQn8'
           title='Watch'
         >
           WATCH
