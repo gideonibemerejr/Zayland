@@ -19,7 +19,7 @@ const Nav = ({ toggleMenu }) => {
         >
           HOME
         </Link>
-        <Link
+        {/* <Link
           className='link dim white-80 f6 f5-l fw5 dib mr3 mr4-l'
           to='/nobody-knows'
           title='Nobody Knows'
@@ -32,7 +32,7 @@ const Nav = ({ toggleMenu }) => {
           title='Credits'
         >
           CREDITS
-        </Link>
+        </Link> */}
         <Link
           className='link dim white-80 f6 f5-l fw5 dib mr3 mr4-l'
           to='/watch'

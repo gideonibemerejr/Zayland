@@ -1,10 +1,9 @@
 import React, { useEffect } from 'react';
-import { getLetsGoPlatforms } from '../../data';
+import { get500DegreesPlatforms } from '../../data';
 
-const platforms = getLetsGoPlatforms();
+const platforms = get500DegreesPlatforms();
 const Home = ({ setCurrentPage }) => {
   useEffect(() => {
-    console.log('setting');
     setCurrentPage('HOME');
   }, [setCurrentPage]);
   return (
@@ -12,7 +11,7 @@ const Home = ({ setCurrentPage }) => {
       <section className='w-100 flex flex-column  justify-center items-center mh5-l pa2 pa0-ns mt5-l'>
         <div className='w-100 w-75-l h-75 mb2 flex justify-center items-center'>
           <img
-            src='https://zayland-assets.s3.amazonaws.com/images/letsGoCover_sm0.jpg'
+            src='https://zayland-assets.s3.amazonaws.com/images/500.jpeg'
             alt=''
             className='w-50-ns w-100'
           />

@@ -112,6 +112,38 @@ export function getRemixesPlatforms() {
     },
   ];
 }
+export function get500DegreesPlatforms() {
+  return [
+    // {
+    //   link: 'https://soundcloud.com/thenuwavesound/sets/nkremixes',
+    //   title: 'Soundcloud',
+    //   iconSrc: soundcloud,
+    // },
+    {
+      link:
+        'https://open.spotify.com/track/2UpKuVhFAFvMKJ4LSkyNQx?si=O8Wse0vrR3uQHf07-stsag',
+      title: 'Spotify',
+      iconSrc: spotify,
+    },
+    {
+      link: 'https://tidal.com/browse/track/146868109',
+      title: 'Tidal',
+      iconSrc: tidal,
+    },
+    {
+      link:
+        'https://play.google.com/store/music/album/Zayland_500_Degrees_feat_Dee_Gatti?id=Bau2mlt6dddc56jivvz7tcavtee',
+      title: 'Google Play',
+      iconSrc: googlePlay,
+    },
+    {
+      link:
+        'https://music.apple.com/us/album/500-degrees-feat-dee-gatti/1521365033?i=1521365034',
+      title: 'Apple Music',
+      iconSrc: appleMusic,
+    },
+  ];
+}
 
 export function getLetsGoPlatforms() {
   return [
