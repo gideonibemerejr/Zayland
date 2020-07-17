@@ -147,19 +147,20 @@ export function get500DegreesPlatforms() {
 
 export function getStThomasPlatforms() {
   return [
-    // {
-    //   link: 'https://soundcloud.com/thenuwavesound/sets/nkremixes',
-    //   title: 'Soundcloud',
-    //   iconSrc: soundcloud,
-    // },
     {
       link:
-        'https://open.spotify.com/artist/5M9hQI5iiKLFHZ8JRaZafM?si=YAeTbjWuTFeBB9ZtlcwEqw',
+        'https://soundcloud.com/zaylandxx/st-thomas-feat-luna-luna-prod-stefon-osae-zayland/s-Fx9M4ZFgIls',
+      title: 'Soundcloud',
+      iconSrc: soundcloud,
+    },
+    {
+      link:
+        'https://open.spotify.com/track/6MssFSHlGodAFGZWnXDcLC?si=R_a9_rTHQwC-Q7lgrBs6wQ',
       title: 'Spotify',
       iconSrc: spotify,
     },
     {
-      link: 'https://tidal.com/browse/artist/9286800',
+      link: 'https://tidal.com/track/147066808',
       title: 'Tidal',
       iconSrc: tidal,
     },
@@ -170,7 +171,8 @@ export function getStThomasPlatforms() {
       iconSrc: googlePlay,
     },
     {
-      link: 'https://music.apple.com/us/artist/zayland/1314125293',
+      link:
+        'https://music.apple.com/us/album/st-thomas-feat-luna-luna-single/1521671579',
       title: 'Apple Music',
       iconSrc: appleMusic,
     },
