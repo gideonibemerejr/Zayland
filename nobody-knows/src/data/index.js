@@ -145,6 +145,38 @@ export function get500DegreesPlatforms() {
   ];
 }
 
+export function getStThomasPlatforms() {
+  return [
+    // {
+    //   link: 'https://soundcloud.com/thenuwavesound/sets/nkremixes',
+    //   title: 'Soundcloud',
+    //   iconSrc: soundcloud,
+    // },
+    {
+      link:
+        'https://open.spotify.com/artist/5M9hQI5iiKLFHZ8JRaZafM?si=YAeTbjWuTFeBB9ZtlcwEqw',
+      title: 'Spotify',
+      iconSrc: spotify,
+    },
+    {
+      link: 'https://tidal.com/browse/artist/9286800',
+      title: 'Tidal',
+      iconSrc: tidal,
+    },
+    {
+      link:
+        'https://play.google.com/store/music/artist?id=Azl7u5joef2baclmmet6u746ieq',
+      title: 'Google Play',
+      iconSrc: googlePlay,
+    },
+    {
+      link: 'https://music.apple.com/us/artist/zayland/1314125293',
+      title: 'Apple Music',
+      iconSrc: appleMusic,
+    },
+  ];
+}
+
 export function getLetsGoPlatforms() {
   return [
     // {
