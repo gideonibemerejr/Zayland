@@ -11,7 +11,7 @@ const Home = ({ setCurrentPage }) => {
       <section className='w-100 flex flex-column  justify-center items-center mh5-l pa2 pa0-ns mt5-l'>
         <div className='w-100 w-75-l h-75 mb2 flex justify-center items-center'>
           <img
-            src='https://zayland-assets.s3.amazonaws.com/images/stThomas.jpg'
+            src='https://zayland-assets.s3.amazonaws.com/images/FTWL.jpg'
             alt=''
             className='w-50-ns w-100'
           />
