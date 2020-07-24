@@ -112,6 +112,39 @@ export function getRemixesPlatforms() {
     },
   ];
 }
+
+export function getFTWLPlatforms() {
+  return [
+    // {
+    //   link: 'https://soundcloud.com/thenuwavesound/sets/nkremixes',
+    //   title: 'Soundcloud',
+    //   iconSrc: soundcloud,
+    // },
+    {
+      link:
+        'https://open.spotify.com/album/4DdbYsC0c7ie5r84RpnnhH?si=oP2YcFMhQKe0DvHDA02YFA',
+      title: 'Spotify',
+      iconSrc: spotify,
+    },
+    {
+      link: 'https://tidal.com/browse/album/147203939',
+      title: 'Tidal',
+      iconSrc: tidal,
+    },
+    {
+      link:
+        'https://play.google.com/store/music/album/Zayland_From_Texas_With_Love?id=B72opw2tmrzvpuez5dmj3wmuqgm',
+      title: 'Google Play',
+      iconSrc: googlePlay,
+    },
+    {
+      link: 'https://music.apple.com/us/album/from-texas-with-love/1521865071',
+      title: 'Apple Music',
+      iconSrc: appleMusic,
+    },
+  ];
+}
+
 export function get500DegreesPlatforms() {
   return [
     // {

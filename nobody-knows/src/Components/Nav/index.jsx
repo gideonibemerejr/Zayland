@@ -40,13 +40,13 @@ const Nav = ({ toggleMenu }) => {
         >
           WATCH
         </Link>
-        <a
+        {/* <a
           className='pointer link dim white-80 f6 f5-l fw5 dib '
           href='https://shop.zaylandxx.com'
           title='Shop'
         >
           SHOP
-        </a>
+        </a> */}
       </div>
     </nav>
     // <nav className='w-100 z-2'>

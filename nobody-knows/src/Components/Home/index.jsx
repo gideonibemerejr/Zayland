@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
-import { getStThomasPlatforms } from '../../data';
+import { getFTWLPlatforms } from '../../data';
 
-const platforms = getStThomasPlatforms();
+const platforms = getFTWLPlatforms();
 const Home = ({ setCurrentPage }) => {
   useEffect(() => {
     setCurrentPage('HOME');
