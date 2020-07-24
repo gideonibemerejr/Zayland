@@ -115,11 +115,11 @@ export function getRemixesPlatforms() {
 
 export function getFTWLPlatforms() {
   return [
-    // {
-    //   link: 'https://soundcloud.com/thenuwavesound/sets/nkremixes',
-    //   title: 'Soundcloud',
-    //   iconSrc: soundcloud,
-    // },
+    {
+      link: 'https://soundcloud.com/zaylandxx/sets/from-texas-with-love-demo',
+      title: 'Soundcloud',
+      iconSrc: soundcloud,
+    },
     {
       link:
         'https://open.spotify.com/album/4DdbYsC0c7ie5r84RpnnhH?si=oP2YcFMhQKe0DvHDA02YFA',
