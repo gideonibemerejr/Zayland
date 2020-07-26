@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { Nav, Home, Watch, Credits } from '../../Components';
+import { Nav, Home, Watch, FTWLCredits } from '../../Components';
 import { Switch, Route, Redirect } from 'react-router-dom';
 
 class HomePage extends Component {
@@ -37,7 +37,7 @@ class HomePage extends Component {
         {/* {this.state.isMenuOpen && this.renderMenu()} */}
 
         <div
-          className={`homepage--container nobody-knows-bg pa2 flex flex-column items-center`}
+          className={`homepage--container ftwl-bg pa0-l pa2 flex flex-column items-center`}
         >
           <Nav toggleMenu={this.toggleMenu} />
           <Switch>
@@ -54,15 +54,16 @@ class HomePage extends Component {
             /> */}
             <Route
               path='/credits'
-              render={() => <Credits setCurrentPage={this.setCurrentPage} />}
+              render={() => (
+                <FTWLCredits setCurrentPage={this.setCurrentPage} />
+              )}
             />
             <Route
               path='/watch'
               render={() => <Watch setCurrentPage={this.setCurrentPage} />}
             />
-            <Redirect to='/' />
 
-            
+            <Redirect to='/' />
           </Switch>
         </div>
       </>

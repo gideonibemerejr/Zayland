@@ -49,168 +49,210 @@ export function getAlbums() {
   ];
 }
 
-export function getNobodyKnowsPlatforms() {
-  return [
-    {
-      link: 'https://soundcloud.com/zaylandxx/sets/nobody-knows-ep',
-      title: 'Soundcloud',
-      iconSrc: soundcloud,
-    },
-    {
-      link: 'https://open.spotify.com/album/3XcLxDz2UhN4mROLnkCGGb',
-      title: 'Spotify',
-      iconSrc: spotify,
-    },
-    {
-      link: 'https://tidal.com/browse/album/134020393',
-      title: 'Tidal',
-      iconSrc: tidal,
-    },
-    {
-      link:
-        'https://play.google.com/store/music/album/Zayland_Nobody_Knows?id=Bwa6a2jeu4ewa2gpvqcl7a7lwki',
-      title: 'Google Play',
-      iconSrc: googlePlay,
-    },
-    {
-      link:
-        'http://geo.music.apple.com/us/album/nobody-knows-ep/1502401893?mt=1&app=music',
-      title: 'Apple Music',
-      iconSrc: appleMusic,
-    },
-  ];
+export function getFTWLInfo() {
+  return {
+    trackNo: 0,
+    route: '/credits',
+    intro: `From Texas, With Love is a letter from me to you. No matter where you're from you'll relate to the stories and experiences talked about throughout.`,
+    outro: `Thank you to Joaquin, Desiree, Madyson, Gideon, When Where What, Sharell, Austin, MSAW, Jordan and all of the people/fans who mad this possible and encouraged us to keep going`,
+    media: 'https://zayland-assets.s3.amazonaws.com/videos/trafficlights.mp4',
+  };
 }
 
-export function getRemixesPlatforms() {
+export function getFTWLPlatforms() {
   return [
     {
-      link: 'https://soundcloud.com/thenuwavesound/sets/nkremixes',
-      title: 'Soundcloud',
-      iconSrc: soundcloud,
-    },
-    {
-      link: 'https://open.spotify.com/album/4oAXayGFpI3fu2lANITsIJ',
-      title: 'Spotify',
-      iconSrc: spotify,
-    },
-    {
-      link: 'https://tidal.com/browse/album/140737677',
-      title: 'Tidal',
-      iconSrc: tidal,
-    },
-    {
-      link:
-        'https://play.google.com/store/music/album/Zayland_Nobody_Knows_The_Remixes?id=Bzgegybuxruyk35rkugjswj436u&hl=en_US',
-      title: 'Google Play',
-      iconSrc: googlePlay,
-    },
-    {
-      link:
-        'https://music.apple.com/us/album/nobody-knows-the-remixes/1512557872',
-      title: 'Apple Music',
-      iconSrc: appleMusic,
-    },
-  ];
-}
-
-export function get500DegreesPlatforms() {
-  return [
-    // {
-    //   link: 'https://soundcloud.com/thenuwavesound/sets/nkremixes',
-    //   title: 'Soundcloud',
-    //   iconSrc: soundcloud,
-    // },
-    {
-      link:
-        'https://open.spotify.com/track/2UpKuVhFAFvMKJ4LSkyNQx?si=O8Wse0vrR3uQHf07-stsag',
-      title: 'Spotify',
-      iconSrc: spotify,
-    },
-    {
-      link: 'https://tidal.com/browse/track/146868109',
-      title: 'Tidal',
-      iconSrc: tidal,
-    },
-    {
-      link:
-        'https://play.google.com/store/music/album/Zayland_500_Degrees_feat_Dee_Gatti?id=Bau2mlt6dddc56jivvz7tcavtee',
-      title: 'Google Play',
-      iconSrc: googlePlay,
-    },
-    {
-      link:
-        'https://music.apple.com/us/album/500-degrees-feat-dee-gatti/1521365033?i=1521365034',
-      title: 'Apple Music',
-      iconSrc: appleMusic,
-    },
-  ];
-}
-
-export function getStThomasPlatforms() {
-  return [
-    {
-      link:
-        'https://soundcloud.com/zaylandxx/st-thomas-feat-luna-luna-prod-stefon-osae-zayland/s-Fx9M4ZFgIls',
+      link: 'https://soundcloud.com/zaylandxx/sets/from-texas-with-love-demo',
       title: 'Soundcloud',
       iconSrc: soundcloud,
     },
     {
       link:
-        'https://open.spotify.com/track/6MssFSHlGodAFGZWnXDcLC?si=R_a9_rTHQwC-Q7lgrBs6wQ',
+        'https://open.spotify.com/album/4DdbYsC0c7ie5r84RpnnhH?si=oP2YcFMhQKe0DvHDA02YFA',
       title: 'Spotify',
       iconSrc: spotify,
     },
     {
-      link: 'https://tidal.com/track/147066808',
+      link: 'https://tidal.com/browse/album/147203939',
       title: 'Tidal',
       iconSrc: tidal,
     },
     {
       link:
-        'https://play.google.com/store/music/artist?id=Azl7u5joef2baclmmet6u746ieq',
+        'https://play.google.com/store/music/album/Zayland_From_Texas_With_Love?id=B72opw2tmrzvpuez5dmj3wmuqgm',
       title: 'Google Play',
       iconSrc: googlePlay,
     },
     {
-      link:
-        'https://music.apple.com/us/album/st-thomas-feat-luna-luna-single/1521671579',
+      link: 'https://music.apple.com/us/album/from-texas-with-love/1521865071',
       title: 'Apple Music',
       iconSrc: appleMusic,
     },
   ];
 }
 
-export function getLetsGoPlatforms() {
-  return [
-    // {
-    //   link: 'https://soundcloud.com/thenuwavesound/sets/nkremixes',
-    //   title: 'Soundcloud',
-    //   iconSrc: soundcloud,
-    // },
-    {
-      link: 'https://open.spotify.com/album/2Sz4V0YWLjMSzeWqVpUYpY',
-      title: 'Spotify',
-      iconSrc: spotify,
-    },
-    {
-      link: 'https://tidal.com/browse/album/146828472',
-      title: 'Tidal',
-      iconSrc: tidal,
-    },
-    {
-      link:
-        'https://play.google.com/store/music/album/Zayland_Let_s_Go_feat_Randy_Class?id=Brymedclcxslrb5jz6nxnnfczoa',
-      title: 'Google Play',
-      iconSrc: googlePlay,
-    },
-    {
-      link:
-        'https://music.apple.com/us/album/lets-go-feat-randy-class-single/1521268708',
-      title: 'Apple Music',
-      iconSrc: appleMusic,
-    },
-  ];
-}
+// export function getNobodyKnowsPlatforms() {
+//   return [
+//     {
+//       link: 'https://soundcloud.com/zaylandxx/sets/nobody-knows-ep',
+//       title: 'Soundcloud',
+//       iconSrc: soundcloud,
+//     },
+//     {
+//       link: 'https://open.spotify.com/album/3XcLxDz2UhN4mROLnkCGGb',
+//       title: 'Spotify',
+//       iconSrc: spotify,
+//     },
+//     {
+//       link: 'https://tidal.com/browse/album/134020393',
+//       title: 'Tidal',
+//       iconSrc: tidal,
+//     },
+//     {
+//       link:
+//         'https://play.google.com/store/music/album/Zayland_Nobody_Knows?id=Bwa6a2jeu4ewa2gpvqcl7a7lwki',
+//       title: 'Google Play',
+//       iconSrc: googlePlay,
+//     },
+//     {
+//       link:
+//         'http://geo.music.apple.com/us/album/nobody-knows-ep/1502401893?mt=1&app=music',
+//       title: 'Apple Music',
+//       iconSrc: appleMusic,
+//     },
+//   ];
+// }
+
+// export function getRemixesPlatforms() {
+//   return [
+//     {
+//       link: 'https://soundcloud.com/thenuwavesound/sets/nkremixes',
+//       title: 'Soundcloud',
+//       iconSrc: soundcloud,
+//     },
+//     {
+//       link: 'https://open.spotify.com/album/4oAXayGFpI3fu2lANITsIJ',
+//       title: 'Spotify',
+//       iconSrc: spotify,
+//     },
+//     {
+//       link: 'https://tidal.com/browse/album/140737677',
+//       title: 'Tidal',
+//       iconSrc: tidal,
+//     },
+//     {
+//       link:
+//         'https://play.google.com/store/music/album/Zayland_Nobody_Knows_The_Remixes?id=Bzgegybuxruyk35rkugjswj436u&hl=en_US',
+//       title: 'Google Play',
+//       iconSrc: googlePlay,
+//     },
+//     {
+//       link:
+//         'https://music.apple.com/us/album/nobody-knows-the-remixes/1512557872',
+//       title: 'Apple Music',
+//       iconSrc: appleMusic,
+//     },
+//   ];
+// }
+
+// export function get500DegreesPlatforms() {
+//   return [
+//     // {
+//     //   link: 'https://soundcloud.com/thenuwavesound/sets/nkremixes',
+//     //   title: 'Soundcloud',
+//     //   iconSrc: soundcloud,
+//     // },
+//     {
+//       link:
+//         'https://open.spotify.com/track/2UpKuVhFAFvMKJ4LSkyNQx?si=O8Wse0vrR3uQHf07-stsag',
+//       title: 'Spotify',
+//       iconSrc: spotify,
+//     },
+//     {
+//       link: 'https://tidal.com/browse/track/146868109',
+//       title: 'Tidal',
+//       iconSrc: tidal,
+//     },
+//     {
+//       link:
+//         'https://play.google.com/store/music/album/Zayland_500_Degrees_feat_Dee_Gatti?id=Bau2mlt6dddc56jivvz7tcavtee',
+//       title: 'Google Play',
+//       iconSrc: googlePlay,
+//     },
+//     {
+//       link:
+//         'https://music.apple.com/us/album/500-degrees-feat-dee-gatti/1521365033?i=1521365034',
+//       title: 'Apple Music',
+//       iconSrc: appleMusic,
+//     },
+//   ];
+// }
+
+// export function getStThomasPlatforms() {
+//   return [
+//     {
+//       link:
+//         'https://soundcloud.com/zaylandxx/st-thomas-feat-luna-luna-prod-stefon-osae-zayland/s-Fx9M4ZFgIls',
+//       title: 'Soundcloud',
+//       iconSrc: soundcloud,
+//     },
+//     {
+//       link:
+//         'https://open.spotify.com/track/6MssFSHlGodAFGZWnXDcLC?si=R_a9_rTHQwC-Q7lgrBs6wQ',
+//       title: 'Spotify',
+//       iconSrc: spotify,
+//     },
+//     {
+//       link: 'https://tidal.com/track/147066808',
+//       title: 'Tidal',
+//       iconSrc: tidal,
+//     },
+//     {
+//       link:
+//         'https://play.google.com/store/music/artist?id=Azl7u5joef2baclmmet6u746ieq',
+//       title: 'Google Play',
+//       iconSrc: googlePlay,
+//     },
+//     {
+//       link:
+//         'https://music.apple.com/us/album/st-thomas-feat-luna-luna-single/1521671579',
+//       title: 'Apple Music',
+//       iconSrc: appleMusic,
+//     },
+//   ];
+// }
+
+// export function getLetsGoPlatforms() {
+//   return [
+//     // {
+//     //   link: 'https://soundcloud.com/thenuwavesound/sets/nkremixes',
+//     //   title: 'Soundcloud',
+//     //   iconSrc: soundcloud,
+//     // },
+//     {
+//       link: 'https://open.spotify.com/album/2Sz4V0YWLjMSzeWqVpUYpY',
+//       title: 'Spotify',
+//       iconSrc: spotify,
+//     },
+//     {
+//       link: 'https://tidal.com/browse/album/146828472',
+//       title: 'Tidal',
+//       iconSrc: tidal,
+//     },
+//     {
+//       link:
+//         'https://play.google.com/store/music/album/Zayland_Let_s_Go_feat_Randy_Class?id=Brymedclcxslrb5jz6nxnnfczoa',
+//       title: 'Google Play',
+//       iconSrc: googlePlay,
+//     },
+//     {
+//       link:
+//         'https://music.apple.com/us/album/lets-go-feat-randy-class-single/1521268708',
+//       title: 'Apple Music',
+//       iconSrc: appleMusic,
+//     },
+//   ];
+// }
 
 export function getVideos() {
   return [
@@ -231,9 +273,121 @@ export function getSongRoutes() {
       trackNo: 1,
       title: 'Forgot Who I Was',
       artist: 'Zayland',
-      features: ['Teeta,', 'Gideon'],
+      features: [],
       producers: ['AEBeats'],
-      route: '/forgot-who-i-was',
+      route: '/credits/forgot-who-i-was',
+      media: {
+        type: 'photo',
+        src: '',
+      },
+    },
+    {
+      trackNo: 2,
+      title: 'St. Thomas',
+      artist: 'Zayland',
+      features: ['Luna Luna'],
+      producers: ['Stefon Osae,', 'Zayland'],
+      route: '/credits/st-thomas',
+      media: {
+        type: 'photo',
+        src: '',
+      },
+    },
+    {
+      trackNo: 3,
+      title: 'Dior Sheets',
+      artist: 'Zayland',
+      features: ['The Teeta,', 'Mike Melinoe'],
+      producers: ['Polito,', 'Sonic Major,', 'Zayland'],
+      route: '/credits/dior-sheets',
+      media: {
+        type: 'video',
+        src: 'https://zayland-assets.s3.amazonaws.com/videos/diorsheets.mp4',
+      },
+    },
+    {
+      trackNo: 4,
+      title: 'Simone',
+      artist: 'Zayland',
+      features: [],
+      producers: ['Zach Witness'],
+      route: '/credits/simone',
+      media: {
+        type: 'photo',
+        src: '',
+      },
+    },
+    {
+      trackNo: 5,
+      title: `Let's Go`,
+      artist: 'Zayland',
+      features: ['Randy Class'],
+      producers: ['Big Tex Johnny,', 'Zayland'],
+      route: '/credits/lets-go',
+      media: {
+        type: 'video',
+        src: 'https://zayland-assets.s3.amazonaws.com/videos/letsgo.mp4',
+      },
+    },
+    {
+      trackNo: 6,
+      title: 'Not The Same',
+      artist: 'Zayland',
+      features: ['FRITOGANG'],
+      producers: ['Big Tex Johnny'],
+      route: '/credits/not-the-same',
+      media: {
+        type: 'photo',
+        src: '',
+      },
+    },
+    {
+      trackNo: 7,
+      title: 'Floating',
+      artist: 'Zayland',
+      features: ['Spike Chester,', 'Devy Stonez'],
+      producers: ['Stefon Osae,', 'Chase Goldman'],
+      route: '/credits/floating',
+      media: {
+        type: 'photo',
+        src: '',
+      },
+    },
+    {
+      trackNo: 8,
+      title: '500 Degrees',
+      artist: 'Zayland',
+      features: ['Dee Gatti'],
+      producers: ['Zayland,', 'Larce'],
+      route: '/credits/500-degrees',
+      media: {
+        type: 'photo',
+        src: '',
+      },
+    },
+    {
+      trackNo: 9,
+      title: 'Her Interlude',
+      artist: 'Zayland',
+      features: ['LaVoyce'],
+      producers: ['NoSalez'],
+      route: '/credits/her-interlude',
+      media: {
+        type: 'photo',
+        src: '',
+      },
+    },
+    {
+      trackNo: 10,
+      title: 'Wax & Rose Freestyle',
+      artist: 'Zayland',
+      features: [],
+      producers: ['PKBeatz'],
+      route: '/credits/wax-rose-freestyle',
+      media: {
+        type: 'photo',
+        src: '',
+      },
     },
   ];
 }
