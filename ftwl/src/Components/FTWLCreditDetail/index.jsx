@@ -23,19 +23,21 @@ const FTWLCreditDetail = (props) => {
 
 const AlbumInfo = ({ trackNo, intro, outro, media }) => {
   return (
-    <article className='pl6-l pa0 mb4 flex flex-row-l flex-column'>
+    <article className='pl6-l pa0 mb4 flex flex-row-l flex-column '>
       <div className='text w-25-l w-100 mr7-l mb4 ph6-m'>
-        <TrackNumber trackNo={trackNo} />
-        <h1 className='ts1 f2'>From Texas, With Love</h1>
+        <h1 className='ts1 f2 mt0'>From Texas, With Love</h1>
         <div className='f4 ts1 mb3'>{intro}</div>
 
-        <div className='f4 ts1 mb4'>{outro}</div>
+        <div
+          className='f4 ts1 mb4'
+          dangerouslySetInnerHTML={{ __html: outro }}
+        />
 
         <div className='mb3'>
           <label htmlFor='executive' className='fw2 ts1 f4'>
             Executive Producer
           </label>
-          <div className='ts1 f4' name='executive'>
+          <div className='ts1 f3' name='executive'>
             Joaqu.n
           </div>
         </div>
@@ -43,7 +45,7 @@ const AlbumInfo = ({ trackNo, intro, outro, media }) => {
           <label htmlFor='executive' className='fw2 ts1 f4'>
             Creative Direction
           </label>
-          <div className='ts1 f4' name='executive'>
+          <div className='ts1 f3' name='executive'>
             Joaqu.n & DesForDesiree
           </div>
         </div>
@@ -51,7 +53,7 @@ const AlbumInfo = ({ trackNo, intro, outro, media }) => {
           <label htmlFor='executive' className='fw2 ts1 f4'>
             Released via
           </label>
-          <div className='ts1 f4' name='executive'>
+          <div className='ts1 f3' name='executive'>
             The Nu Wave SOUND
           </div>
         </div>
@@ -59,7 +61,7 @@ const AlbumInfo = ({ trackNo, intro, outro, media }) => {
           <label htmlFor='executive' className='fw2 ts1 f4'>
             Licensed via
           </label>
-          <div className='ts1 f4' name='executive'>
+          <div className='ts1 f3' name='executive'>
             Zay's Land
           </div>
         </div>
@@ -86,7 +88,7 @@ const TrackInfo = ({ trackNo, title, artist, features, producers, media }) => {
             <label htmlFor='features' className='fw2 ts1 f4'>
               Featuring
             </label>
-            <div className='mt1 ts1 f4 flex w-100 ' name='features'>
+            <div className='mt1 ts1  flex w-100 ' name='features'>
               {features.map((feature) => (
                 <p className='ma0 fw4 f3 ts1'>{feature.toUpperCase()}&nbsp;</p>
               ))}
@@ -97,7 +99,7 @@ const TrackInfo = ({ trackNo, title, artist, features, producers, media }) => {
           <label htmlFor='producers' className='fw2 ts1 f4'>
             Produced by
           </label>
-          <div className='mt1 ts1 f4 flex' name='producers'>
+          <div className='mt1 ts1 flex' name='producers'>
             {producers.map((producer) => (
               <p className='ma0 fw4 f3 ts1'>{producer.toUpperCase()}&nbsp;</p>
             ))}
