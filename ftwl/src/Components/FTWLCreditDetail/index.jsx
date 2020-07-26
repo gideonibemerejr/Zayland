@@ -97,7 +97,9 @@ const TrackInfo = ({ trackNo, title, artist, features, producers, media }) => {
           </label>
           <div className='mt1 ts1 flex' name='producers'>
             {producers.map((producer) => (
-              <p className='ma0 fw4 f4 ts1'>{producer.toUpperCase()}&nbsp;</p>
+              <p key={producer} className='ma0 fw4 f4 ts1'>
+                {producer.toUpperCase()}&nbsp;
+              </p>
             ))}
           </div>
         </div>
@@ -110,7 +112,7 @@ const TrackInfo = ({ trackNo, title, artist, features, producers, media }) => {
           </div>
         </div>
       </div>
-      <div className='w-60-l w-100 ph6-m'>
+      <div className='w-60-l w-100 ph6-m mb4'>
         {media.type === 'video' ? (
           <video
             className={`${
@@ -125,10 +127,16 @@ const TrackInfo = ({ trackNo, title, artist, features, producers, media }) => {
             autoPlay
           />
         ) : (
-          <div className='flex justify-between'>
-            {media.photos.map((photoSrc) => (
-              <img key={photoSrc} src={photoSrc} alt={photoSrc} />
-            ))}
+          <div className='w-100 flex justify-around'>
+            {media.photos && media.photos.length ? (
+              media.photos.map((photoSrc) => (
+                <figure className='pa0 w-50' key={photoSrc}>
+                  <img src={photoSrc} alt={photoSrc} />
+                </figure>
+              ))
+            ) : (
+              <img key={media.src} src={media.src} alt={media.src} />
+            )}
           </div>
         )}
       </div>

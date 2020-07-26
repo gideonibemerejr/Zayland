@@ -184,7 +184,7 @@ export function getSongRoutes() {
       producers: ['PKBeatz'],
       route: '/credits/wax-rose-freestyle',
       media: {
-        type: 'photo',
+        type: 'video',
         src: 'https://zayland-assets.s3.amazonaws.com/videos/freestyle.mp4',
       },
     },
