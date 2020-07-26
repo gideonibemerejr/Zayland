@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import { Nav, Home, Watch, FTWLCredits } from '../../Components';
+
 import { Switch, Route, Redirect } from 'react-router-dom';
 
 class HomePage extends Component {
@@ -52,12 +53,7 @@ class HomePage extends Component {
                 <NobodyKnows setCurrentPage={this.setCurrentPage} />
               )}
             /> */}
-            <Route
-              path='/credits'
-              render={() => (
-                <FTWLCredits setCurrentPage={this.setCurrentPage} />
-              )}
-            />
+            <Route path='/credits' render={(props) => <FTWLCredits />} />
             <Route
               path='/watch'
               render={() => <Watch setCurrentPage={this.setCurrentPage} />}

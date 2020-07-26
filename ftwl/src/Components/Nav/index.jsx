@@ -1,7 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { getFTWLInfo } from '../../data';
 
 const Nav = ({ toggleMenu }) => {
+  const info = getFTWLInfo();
   return (
     <nav className='db dt-l w-100 border-box pa4 fixed'>
       <Link
@@ -28,7 +30,12 @@ const Nav = ({ toggleMenu }) => {
         </Link> */}
         <Link
           className='link dim ts1 f6 f5-l fw5 dib mr3 mr4-l'
-          to='/credits'
+          to={{
+            pathname: '/credits',
+            state: {
+              content: info,
+            },
+          }}
           title='Credits'
         >
           CREDITS

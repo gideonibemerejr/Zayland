@@ -1,5 +1,5 @@
 import React from 'react';
-import { Switch, Route, NavLink } from 'react-router-dom';
+import { Switch, Route, NavLink, useLocation } from 'react-router-dom';
 import { getSongRoutes, getFTWLInfo } from '../../data';
 import { TrackNumber } from '../';
 import FTWLCreditDetail from '../FTWLCreditDetail';
@@ -10,12 +10,12 @@ const info = getFTWLInfo();
 const FTWLCredits = () => {
   return (
     <div className='mt5 w-100 ph3 ph4-l'>
-      <div className='mt5 mt4-l flex flex-wrap justify-start'>
+      <div className='mt5 mt4-l flex flex-wrap justify-start-l justify-center'>
         <NavLink
           to={{
             pathname: info.route,
             state: {
-              data: info,
+              content: info,
             },
           }}
           className='link'
@@ -24,10 +24,11 @@ const FTWLCredits = () => {
         </NavLink>
         {songRoutes.map((song) => (
           <NavLink
+            key={song.title}
             to={{
               pathname: song.route,
               state: {
-                data: song,
+                content: song,
               },
             }}
             className='link outline-0'
@@ -37,8 +38,11 @@ const FTWLCredits = () => {
         ))}
       </div>
       <Switch>
-        <Route path='/credits/:slug' render={() => <FTWLCreditDetail />} />
-        <Route path='/credits' render={() => <FTWLCreditDetail />} />
+        <Route path='/credits/:slug' render={(props) => <FTWLCreditDetail />} />
+        <Route
+          path='/credits'
+          render={(props) => <FTWLCreditDetail info={info} />}
+        />
       </Switch>
     </div>
   );

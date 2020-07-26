@@ -2,20 +2,20 @@ import React from 'react';
 import { useLocation } from 'react-router-dom';
 import { TrackNumber } from '..';
 
-const FTWLCreditDetail = () => {
-  const location = useLocation();
-
+const FTWLCreditDetail = (props) => {
+  let location = useLocation();
+  console.log(location);
   return (
     <main className='w-100 mt5'>
-      {location.state.data.intro ? (
+      {props.info ? (
         <AlbumInfo
-          trackNo={location.state.data.trackNo}
-          intro={location.state.data.intro}
-          outro={location.state.data.outro}
-          media={location.state.data.media}
+          trackNo={props.info.trackNo}
+          intro={props.info.intro}
+          outro={props.info.outro}
+          media={props.info.media}
         />
       ) : (
-        <TrackInfo {...location.state.data} />
+        <TrackInfo {...location.state.content} />
       )}
     </main>
   );
@@ -23,8 +23,8 @@ const FTWLCreditDetail = () => {
 
 const AlbumInfo = ({ trackNo, intro, outro, media }) => {
   return (
-    <article className='pl6-l pa0 flex flex-row-l flex-column'>
-      <div className='text w-25-l w-100 mr7-l mb4'>
+    <article className='pl6-l pa0 mb4 flex flex-row-l flex-column'>
+      <div className='text w-25-l w-100 mr7-l mb4 ph6-m'>
         <TrackNumber trackNo={trackNo} />
         <h1 className='ts1 f2'>From Texas, With Love</h1>
         <div className='f4 ts1 mb3'>{intro}</div>
@@ -64,7 +64,7 @@ const AlbumInfo = ({ trackNo, intro, outro, media }) => {
           </div>
         </div>
       </div>
-      <div className='w-50-l w-100'>
+      <div className='w-50-l w-100 ph6-m'>
         <video className='w-75-l w-100' src={media} loop autoPlay muted></video>
       </div>
     </article>
@@ -74,7 +74,7 @@ const AlbumInfo = ({ trackNo, intro, outro, media }) => {
 const TrackInfo = ({ trackNo, title, artist, features, producers, media }) => {
   return (
     <article className='pl6-l pa0 flex flex-row-l flex-column'>
-      <div className='text w-25-l w-100 mr7-l mb4'>
+      <div className='text w-40-l w-100 mr4-l mb4 ph6-m'>
         <TrackNumber trackNo={trackNo} />
         <h1 className='ts1 f1'>{title}</h1>
         <div className='f4 ts1 mb3'></div>
@@ -83,10 +83,10 @@ const TrackInfo = ({ trackNo, title, artist, features, producers, media }) => {
 
         {features.length ? (
           <div className='mb3'>
-            <label htmlFor='executive' className='fw2 ts1 f4'>
+            <label htmlFor='features' className='fw2 ts1 f4'>
               Featuring
             </label>
-            <div className='ts1 f4 flex' name='executive'>
+            <div className='mt1 ts1 f4 flex w-100 ' name='features'>
               {features.map((feature) => (
                 <p className='ma0 fw4 f3 ts1'>{feature.toUpperCase()}&nbsp;</p>
               ))}
@@ -94,32 +94,32 @@ const TrackInfo = ({ trackNo, title, artist, features, producers, media }) => {
           </div>
         ) : null}
         <div className='mb3'>
-          <label htmlFor='executive' className='fw2 ts1 f4'>
+          <label htmlFor='producers' className='fw2 ts1 f4'>
             Produced by
           </label>
-          <div className='ts1 f4' name='executive'>
+          <div className='mt1 ts1 f4 flex' name='producers'>
             {producers.map((producer) => (
               <p className='ma0 fw4 f3 ts1'>{producer.toUpperCase()}&nbsp;</p>
             ))}
           </div>
         </div>
         <div className='mb3'>
-          <label htmlFor='executive' className='fw2 ts1 f4'>
+          <label htmlFor='mastered' className='fw2 ts1 f4'>
             Written, Mixed, & Mastered by
           </label>
-          <div className='ts1 f3' name='executive'>
+          <div className='mt1 ts1 f3' name='mastered'>
             {artist}
           </div>
         </div>
       </div>
-      <div className='w-50-l w-100'>
+      <div className='w-60-l w-100 ph4-m'>
         {media.type === 'video' ? (
           <video
             className={`${
               media.src ===
               'https://zayland-assets.s3.amazonaws.com/videos/diorsheets.mp4'
                 ? 'w-100'
-                : 'w-75-l w-100'
+                : 'w-60-l w-100'
             }`}
             src={media.src}
             controls
