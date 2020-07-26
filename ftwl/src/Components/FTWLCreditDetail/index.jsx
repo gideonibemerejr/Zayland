@@ -115,11 +115,14 @@ const TrackInfo = ({ trackNo, title, artist, features, producers, media }) => {
       <div className='w-50-l w-100'>
         {media.type === 'video' ? (
           <video
-            className='w-75-l w-100'
+            className={`${
+              media.src ===
+              'https://zayland-assets.s3.amazonaws.com/videos/diorsheets.mp4'
+                ? 'w-100'
+                : 'w-75-l w-100'
+            }`}
             src={media.src}
-            loop
-            autoPlay
-            muted
+            controls
           ></video>
         ) : (
           <img src={media.src} alt='' />
