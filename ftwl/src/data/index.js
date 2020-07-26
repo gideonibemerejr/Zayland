@@ -1,20 +1,21 @@
-import appleMusic from '../assets/images/appleMusic.svg';
-import spotify from '../assets/images/spotify.png';
-import tidal from '../assets/images/tidal.svg';
-import googlePlay from '../assets/images/googlePlay.png';
-import soundcloud from '../assets/images/soundcloud.png';
+import appleMusic from '../assets/images/appleMusic.svg'
+import spotify from '../assets/images/spotify.png'
+import tidal from '../assets/images/tidal.svg'
+import googlePlay from '../assets/images/googlePlay.png'
+import soundcloud from '../assets/images/soundcloud.png'
 
 export function getFTWLInfo() {
   return {
     trackNo: 0,
     route: '/credits',
     intro: `From Texas, With Love is a letter from me to you. No matter where you're from you'll relate to the stories and experiences talked about throughout.`,
-    outro: `Thank you to Joaquin, Desiree, Madyson, Gideon, When Where What, Sharell, Austin, MSAW, Jordan and all of the people/fans who mad this possible and encouraged us to keep going. <br /><br />
+    outro: `Thank you to Joaquin, Desiree, Madyson, Gideon, When Where What, Sharell, Austin, MSAW, Jordan and all of the people/fans who mad this possible and encouraged us to keep going. 
+    <br /><br />
     Love, <br />
     Zayland
     `,
     media: 'https://zayland-assets.s3.amazonaws.com/videos/trafficlights.mp4',
-  };
+  }
 }
 
 export function getFTWLPlatforms() {
@@ -46,7 +47,7 @@ export function getFTWLPlatforms() {
       title: 'Apple Music',
       iconSrc: appleMusic,
     },
-  ];
+  ]
 }
 
 export function getVideos() {
@@ -59,7 +60,7 @@ export function getVideos() {
       url: 'https://www.youtube.com/embed/8YCQuLXMNWI',
       title: `Blue feat. Dee Gatti`,
     },
-  ];
+  ]
 }
 
 export function getSongRoutes() {
@@ -109,7 +110,10 @@ export function getSongRoutes() {
       route: '/credits/simone',
       media: {
         type: 'photo',
-        src: '',
+        photos: [
+          'https://zayland-assets.s3.amazonaws.com/images/simone.jpg',
+          'https://zayland-assets.s3.amazonaws.com/images/simone2.jpg',
+        ],
       },
     },
     {
@@ -181,8 +185,8 @@ export function getSongRoutes() {
       route: '/credits/wax-rose-freestyle',
       media: {
         type: 'photo',
-        src: '',
+        src: 'https://zayland-assets.s3.amazonaws.com/videos/freestyle.mp4',
       },
     },
-  ];
+  ]
 }

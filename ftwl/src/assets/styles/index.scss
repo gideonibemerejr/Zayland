@@ -72,6 +72,9 @@ code {
   }
 }
 
+a {
+  outline: 0 !important;
+}
 .hover-bg-ftwl:hover {
   background: #f7ef79;
 }
@@ -101,7 +104,7 @@ code {
 }
 
 .ftwl-bg {
-  background-image: url('https://zayland-assets.s3.amazonaws.com/images/FTWL-BG-min.jpg');
+  background-image: url('https://zayland-assets.s3.amazonaws.com/images/bg-right-min.jpg');
   // background-position: center;
   background-size: cover;
   background-repeat: no-repeat;

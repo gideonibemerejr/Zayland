@@ -1,15 +1,11 @@
-import React, { useEffect, useState } from 'react';
-import { getFTWLPlatforms, } from '../../data';
-import { Link } from 'react-router-dom';
-
-const platforms = getFTWLPlatforms();
+import React, { useEffect } from 'react'
+import { getFTWLPlatforms } from '../../data'
 
 const Home = ({ setCurrentPage }) => {
-  // const [moreInfo, setMoreInfo] = useState(false);
-
+  const platforms = getFTWLPlatforms()
   useEffect(() => {
-    setCurrentPage('HOME');
-  }, [setCurrentPage]);
+    setCurrentPage('HOME')
+  }, [setCurrentPage])
   return (
     <main className='w-100 vh-75 h-100-l flex justify-center items-center mt4'>
       <section className='w-100 flex flex-column  justify-center items-center mh5-l pa2 pa0-ns mt5-l'>
@@ -125,7 +121,7 @@ const Home = ({ setCurrentPage }) => {
     //     </div>
     //   </section>
     // </div>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home

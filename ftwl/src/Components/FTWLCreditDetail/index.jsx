@@ -1,10 +1,10 @@
-import React from 'react';
-import { useLocation } from 'react-router-dom';
-import { TrackNumber } from '..';
+import React from 'react'
+import { useLocation } from 'react-router-dom'
+import { TrackNumber } from '..'
 
 const FTWLCreditDetail = (props) => {
-  let location = useLocation();
-  console.log(location);
+  let location = useLocation()
+  console.log(location)
   return (
     <main className='w-100 mt5'>
       {props.info ? (
@@ -18,18 +18,18 @@ const FTWLCreditDetail = (props) => {
         <TrackInfo {...location.state.content} />
       )}
     </main>
-  );
-};
+  )
+}
 
 const AlbumInfo = ({ trackNo, intro, outro, media }) => {
   return (
     <article className='pl6-l pa0 mb4 flex flex-row-l flex-column '>
-      <div className='text w-25-l w-100 mr7-l mb4 ph6-m'>
+      <div className='text w-40-l w-100 mr7-l mb4 ph6-m'>
         <h1 className='ts1 f2 mt0'>From Texas, With Love</h1>
-        <div className='f4 ts1 mb3'>{intro}</div>
+        <p className='lh-copy ts1 mb3'>{intro}</p>
 
-        <div
-          className='f4 ts1 mb4'
+        <p
+          className=' lh-copy ts1 mb3'
           dangerouslySetInnerHTML={{ __html: outro }}
         />
 
@@ -37,7 +37,7 @@ const AlbumInfo = ({ trackNo, intro, outro, media }) => {
           <label htmlFor='executive' className='fw2 ts1 f4'>
             Executive Producer
           </label>
-          <div className='ts1 f3' name='executive'>
+          <div className='ts1 f4' name='executive'>
             Joaqu.n
           </div>
         </div>
@@ -45,7 +45,7 @@ const AlbumInfo = ({ trackNo, intro, outro, media }) => {
           <label htmlFor='executive' className='fw2 ts1 f4'>
             Creative Direction
           </label>
-          <div className='ts1 f3' name='executive'>
+          <div className='ts1 f4' name='executive'>
             Joaqu.n & DesForDesiree
           </div>
         </div>
@@ -53,7 +53,7 @@ const AlbumInfo = ({ trackNo, intro, outro, media }) => {
           <label htmlFor='executive' className='fw2 ts1 f4'>
             Released via
           </label>
-          <div className='ts1 f3' name='executive'>
+          <div className='ts1 f4' name='executive'>
             The Nu Wave SOUND
           </div>
         </div>
@@ -61,17 +61,17 @@ const AlbumInfo = ({ trackNo, intro, outro, media }) => {
           <label htmlFor='executive' className='fw2 ts1 f4'>
             Licensed via
           </label>
-          <div className='ts1 f3' name='executive'>
+          <div className='ts1 f4' name='executive'>
             Zay's Land
           </div>
         </div>
       </div>
-      <div className='w-50-l w-100 ph6-m'>
-        <video className='w-75-l w-100' src={media} loop autoPlay muted></video>
+      <div className='w-60-l w-100 ph6-m'>
+        <video className='w-80-l w-100' src={media} loop autoPlay muted></video>
       </div>
     </article>
-  );
-};
+  )
+}
 
 const TrackInfo = ({ trackNo, title, artist, features, producers, media }) => {
   return (
@@ -79,18 +79,14 @@ const TrackInfo = ({ trackNo, title, artist, features, producers, media }) => {
       <div className='text w-40-l w-100 mr4-l mb4 ph6-m'>
         <TrackNumber trackNo={trackNo} />
         <h1 className='ts1 f1'>{title}</h1>
-        <div className='f4 ts1 mb3'></div>
-
-        <div className='f4 ts1 mb4'></div>
-
         {features.length ? (
           <div className='mb3'>
-            <label htmlFor='features' className='fw2 ts1 f4'>
+            <label htmlFor='features' className='fw2 ts1 f5'>
               Featuring
             </label>
             <div className='mt1 ts1  flex w-100 ' name='features'>
               {features.map((feature) => (
-                <p className='ma0 fw4 f3 ts1'>{feature.toUpperCase()}&nbsp;</p>
+                <p className='ma0 fw4 f4 ts1'>{feature.toUpperCase()}&nbsp;</p>
               ))}
             </div>
           </div>
@@ -101,7 +97,7 @@ const TrackInfo = ({ trackNo, title, artist, features, producers, media }) => {
           </label>
           <div className='mt1 ts1 flex' name='producers'>
             {producers.map((producer) => (
-              <p className='ma0 fw4 f3 ts1'>{producer.toUpperCase()}&nbsp;</p>
+              <p className='ma0 fw4 f4 ts1'>{producer.toUpperCase()}&nbsp;</p>
             ))}
           </div>
         </div>
@@ -114,7 +110,7 @@ const TrackInfo = ({ trackNo, title, artist, features, producers, media }) => {
           </div>
         </div>
       </div>
-      <div className='w-60-l w-100 ph4-m'>
+      <div className='w-60-l w-100 ph6-m'>
         {media.type === 'video' ? (
           <video
             className={`${
@@ -124,14 +120,20 @@ const TrackInfo = ({ trackNo, title, artist, features, producers, media }) => {
                 : 'w-60-l w-100'
             }`}
             src={media.src}
-            controls
-          ></video>
+            loop
+            muted
+            autoPlay
+          />
         ) : (
-          <img src={media.src} alt='' />
+          <div className='flex justify-between'>
+            {media.photos.map((photoSrc) => (
+              <img key={photoSrc} src={photoSrc} alt={photoSrc} />
+            ))}
+          </div>
         )}
       </div>
     </article>
-  );
-};
+  )
+}
 
-export default FTWLCreditDetail;
+export default FTWLCreditDetail

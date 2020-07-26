@@ -1,11 +1,11 @@
-import React from 'react';
-import { Switch, Route, NavLink, useLocation } from 'react-router-dom';
-import { getSongRoutes, getFTWLInfo } from '../../data';
-import { TrackNumber } from '../';
-import FTWLCreditDetail from '../FTWLCreditDetail';
+import React from 'react'
+import { Switch, Route, NavLink } from 'react-router-dom'
+import { getSongRoutes, getFTWLInfo } from '../../data'
+import { TrackNumber } from '../'
+import FTWLCreditDetail from '../FTWLCreditDetail'
 
-const songRoutes = getSongRoutes();
-const info = getFTWLInfo();
+const songRoutes = getSongRoutes()
+const info = getFTWLInfo()
 
 const FTWLCredits = () => {
   return (
@@ -45,7 +45,7 @@ const FTWLCredits = () => {
         />
       </Switch>
     </div>
-  );
-};
+  )
+}
 
-export default FTWLCredits;
+export default FTWLCredits
