@@ -1,11 +1,11 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { getFTWLInfo } from '../../data';
+import React from 'react'
+import { Link } from 'react-router-dom'
+import { getFTWLInfo } from '../../data'
 
 const Nav = ({ toggleMenu }) => {
-  const info = getFTWLInfo();
+  const info = getFTWLInfo()
   return (
-    <nav className='db dt-l w-100 border-box pa4 fixed'>
+    <nav className='db dt-l w-100 border-box pa4'>
       <Link
         className='db dtc-l v-mid ts1 link dim w-100 w-25-l tc tl-l mb2 mb0-l'
         to='/'
@@ -70,7 +70,7 @@ const Nav = ({ toggleMenu }) => {
     //     </li>
     //   </ul>
     // </nav>
-  );
-};
+  )
+}
 
-export default Nav;
+export default Nav

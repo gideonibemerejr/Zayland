@@ -9,7 +9,7 @@ const info = getFTWLInfo()
 
 const FTWLCredits = () => {
   return (
-    <div className='mt5 w-100 ph3 ph4-l'>
+    <div className=' w-100 ph3 ph4-l'>
       <div className='mt5 mt4-l flex flex-wrap justify-start-l justify-center'>
         <NavLink
           to={{

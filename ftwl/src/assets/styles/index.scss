@@ -144,3 +144,9 @@ div.menu-button {
     height: 50vmin;
   }
 }
+
+@media screen and (min-width: 60em) {
+  .ftwl-pl6-l {
+    padding-left: 5rem !important;
+  }
+}

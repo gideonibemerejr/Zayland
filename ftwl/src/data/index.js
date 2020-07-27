@@ -74,7 +74,7 @@ export function getSongRoutes() {
       route: '/credits/forgot-who-i-was',
       media: {
         type: 'photo',
-        src: '',
+        photos: ['https://zayland-assets.s3.amazonaws.com/images/forgot2.jpg'],
       },
     },
     {
@@ -85,8 +85,11 @@ export function getSongRoutes() {
       producers: ['Stefon Osae,', 'Zayland'],
       route: '/credits/st-thomas',
       media: {
-        type: 'photo',
-        src: '',
+        type: 'video',
+        videos: [
+          'https://zayland-assets.s3.amazonaws.com/videos/stthomas.mp4',
+          'https://zayland-assets.s3.amazonaws.com/videos/stthomas2.mp4',
+        ],
       },
     },
     {
@@ -110,10 +113,7 @@ export function getSongRoutes() {
       route: '/credits/simone',
       media: {
         type: 'photo',
-        photos: [
-          'https://zayland-assets.s3.amazonaws.com/images/simone.jpg',
-          'https://zayland-assets.s3.amazonaws.com/images/simone2.jpg',
-        ],
+        photos: ['https://zayland-assets.s3.amazonaws.com/images/simone2.jpg'],
       },
     },
     {
@@ -137,7 +137,10 @@ export function getSongRoutes() {
       route: '/credits/not-the-same',
       media: {
         type: 'photo',
-        src: '',
+        photos: [
+          'https://zayland-assets.s3.amazonaws.com/images/notthesame.jpg',
+          'https://zayland-assets.s3.amazonaws.com/images/notthesame2.jpg',
+        ],
       },
     },
     {
@@ -149,7 +152,10 @@ export function getSongRoutes() {
       route: '/credits/floating',
       media: {
         type: 'photo',
-        src: '',
+        photos: [
+          'https://zayland-assets.s3.amazonaws.com/images/floating.jpg',
+          'https://zayland-assets.s3.amazonaws.com/images/floating2.jpg',
+        ],
       },
     },
     {
@@ -173,7 +179,10 @@ export function getSongRoutes() {
       route: '/credits/her-interlude',
       media: {
         type: 'photo',
-        src: '',
+        photos: [
+          'https://zayland-assets.s3.amazonaws.com/images/her.jpg',
+          'https://zayland-assets.s3.amazonaws.com/images/her2.jpg',
+        ],
       },
     },
     {

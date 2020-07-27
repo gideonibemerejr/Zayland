@@ -1,7 +1,7 @@
-import React from 'react';
-import { useLocation } from 'react-router-dom';
+import React from 'react'
+import { useLocation } from 'react-router-dom'
 const TrackNumber = ({ route, trackNo }) => {
-  const location = useLocation();
+  const location = useLocation()
 
   return (
     <div
@@ -11,7 +11,7 @@ const TrackNumber = ({ route, trackNo }) => {
     >
       <p>{trackNo}</p>
     </div>
-  );
-};
+  )
+}
 
-export default TrackNumber;
+export default TrackNumber
