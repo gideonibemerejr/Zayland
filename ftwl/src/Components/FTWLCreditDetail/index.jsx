@@ -4,7 +4,7 @@ import { TrackNumber } from '..'
 
 const FTWLCreditDetail = (props) => {
   let location = useLocation()
-  console.log(location)
+
   return (
     <main className='w-100 mt5'>
       {props.info ? (

@@ -16,6 +16,6 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: us-east-1
       - name: Deploy Website
-        run: cd nobody-knows && npm install && npm run build && aws s3 sync build/ s3://${{ secrets.AWS_S3_BUCKET }} --delete
+        run: cd ftwl && npm install && npm run build && aws s3 sync build/ s3://${{ secrets.AWS_S3_BUCKET }} --delete
       - name: Update Cache Control for index.html
         run: aws s3 cp s3://${{ secrets.AWS_S3_BUCKET }}/index.html s3://${{ secrets.AWS_S3_BUCKET }}/index.html --metadata-directive REPLACE --cache-control no-cache
