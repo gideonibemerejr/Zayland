@@ -9,7 +9,6 @@ const FTWLCreditDetail = (props) => {
     <main className='w-100 mt5'>
       {props.info ? (
         <AlbumInfo
-          trackNo={props.info.trackNo}
           intro={props.info.intro}
           outro={props.info.outro}
           media={props.info.media}
@@ -21,7 +20,7 @@ const FTWLCreditDetail = (props) => {
   )
 }
 
-const AlbumInfo = ({ trackNo, intro, outro, media }) => {
+const AlbumInfo = ({ intro, outro, media }) => {
   return (
     <article className='ftwl-pl6-l pa0 mb4 flex flex-row-l flex-column '>
       <div className='text w-40-l w-100 mr7-l mb4 ph6-m'>
