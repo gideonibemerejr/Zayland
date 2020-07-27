@@ -8,11 +8,13 @@ export function getFTWLInfo() {
   return {
     trackNo: 0,
     route: '/credits',
-    intro: `From Texas, With Love is a letter from me to you. No matter where you're from you'll relate to the stories and experiences talked about throughout.`,
-    outro: `Thank you to Joaquin, Desiree, Madyson, Gideon, When Where What, Sharell, Austin, MSAW, Jordan and all of the people/fans who mad this possible and encouraged us to keep going. 
+    intro: `From Texas, With Love is a letter from me to you. No matter where you're from you'll relate to the stories and experiences talked about throughout.
     <br /><br />
     Love, <br />
     Zayland
+    <br />`,
+    outro: `Thank you to Joaquin, Desiree, Madyson, Gideon, When Where What, Sharell, Austin, MSAW, Jordan and all of the people/fans who mad this possible and encouraged us to keep going. 
+    
     `,
     media: 'https://zayland-assets.s3.amazonaws.com/videos/trafficlights.mp4',
   }
@@ -154,7 +156,7 @@ export function getSongRoutes() {
         type: 'photo',
         photos: [
           'https://zayland-assets.s3.amazonaws.com/images/floating.jpg',
-          'https://zayland-assets.s3.amazonaws.com/images/floating2.jpg',
+          'https://zayland-assets.s3.amazonaws.com/images/floating.jpg',
         ],
       },
     },

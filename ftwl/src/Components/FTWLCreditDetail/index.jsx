@@ -8,11 +8,7 @@ const FTWLCreditDetail = (props) => {
   return (
     <main className='w-100 mt5'>
       {props.info ? (
-        <AlbumInfo
-          intro={props.info.intro}
-          outro={props.info.outro}
-          media={props.info.media}
-        />
+        <AlbumInfo intro={props.info.intro} media={props.info.media} />
       ) : (
         <TrackInfo {...location.state.content} />
       )}
@@ -20,21 +16,28 @@ const FTWLCreditDetail = (props) => {
   )
 }
 
-const AlbumInfo = ({ intro, outro, media }) => {
+const AlbumInfo = ({ intro, media }) => {
   return (
     <article className='ftwl-pl6-l pa0 mb4 flex flex-row-l flex-column '>
       <div className='text w-40-l w-100 mr7-l mb4 ph6-m'>
         <h1 className='ts1 f2 mt0'>From Texas, With Love</h1>
-        <p className='lh-copy ts1 mb3'>{intro}</p>
 
         <p
-          className=' lh-copy ts1 mb3'
-          dangerouslySetInnerHTML={{ __html: outro }}
+          className=' lh-copy ts1 mb4'
+          dangerouslySetInnerHTML={{ __html: intro }}
         />
 
         <div className='mb3'>
           <label htmlFor='executive' className='fw2 ts1'>
-            Executive Producer
+            Photography
+          </label>
+          <p className='ts1 fw4 mt1 mt1' name='executive'>
+            DesForDesiree
+          </p>
+        </div>
+        <div className='mb3'>
+          <label htmlFor='executive' className='fw2 ts1'>
+            Graphic Design
           </label>
           <p className='ts1 fw4 mt1' name='executive'>
             Joaqu.n
@@ -42,26 +45,10 @@ const AlbumInfo = ({ intro, outro, media }) => {
         </div>
         <div className='mb3'>
           <label htmlFor='executive' className='fw2 ts1'>
-            Creative Direction
-          </label>
-          <p className='ts1 fw4 mt1 mt1' name='executive'>
-            Joaqu.n & DesForDesiree
-          </p>
-        </div>
-        <div className='mb3'>
-          <label htmlFor='executive' className='fw2 ts1'>
-            Released via
+            Executive Producer
           </label>
           <p className='ts1 fw4 mt1' name='executive'>
-            The Nu Wave SOUND
-          </p>
-        </div>
-        <div className='mb3'>
-          <label htmlFor='executive' className='fw2 ts1'>
-            Licensed via
-          </label>
-          <p className='ts1 f4 fw4 mt1' name='executive'>
-            Zay's Land
+            Joaqu.n
           </p>
         </div>
       </div>
