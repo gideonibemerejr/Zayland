@@ -11,6 +11,7 @@ class App extends Component {
     products: [],
     shop: {},
     activeProduct: '',
+    total: 0,
   };
   options = {
     animate: true,
@@ -114,10 +115,28 @@ class App extends Component {
       />
     );
   };
+
+  updateTotal = (total) => {
+    this.setState({ total });
+  };
+
+  // renderCartTotal = () => {
+  //   let totalToAddTo = this.state.total;
+  //   this.state.checkout.lineItems.forEach((lineItem) =>
+  //     lineItem.variableValues.lineItems.forEach(
+  //       (item) => (totalToAddTo = totalToAddTo + item.quantity)
+  //     )
+  //   );
+  //   this.updateTotal(totalToAddTo);
+  //   console.log(totalToAddTo);
+  //   return totalToAddTo;
+  // };
+
   render() {
     return (
       <>
         {this.state.isCartOpen && this.renderCartPage()}
+
         <div id='grained' className='home-grid'>
           <nav className='db dt-l w-100 border-box pa3 ph5-l relative'>
             <Link
@@ -158,7 +177,8 @@ class App extends Component {
                 }
                 title='Cart'
               >
-                CART {`(${this.state.checkout.lineItems.length})`}
+                CART
+                {/* {`(${this.renderCartTotal()})`} */}
               </div>
             </div>
           </nav>

@@ -43,7 +43,6 @@ class ProductDetail extends Component {
   };
 
   handleOptionChange = (event) => {
-    console.log('working');
     const target = event.target;
     let selectedOptions = this.state.selectedOptions;
     selectedOptions[target.name] = target.value;
@@ -71,7 +70,6 @@ class ProductDetail extends Component {
   // variantQuantity = this.state.selectedVariantQuantity || 1;
 
   render() {
-    console.log(this.state);
     let variantImages = this.state.product && this.state.product.images;
 
     let variantQuantity = this.state.selectedVariantQuantity || 1;
