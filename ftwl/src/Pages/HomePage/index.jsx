@@ -1,32 +1,32 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
-import { Nav, Home, Watch, FTWLCredits } from '../../Components';
+import { Nav, Home, Watch, FTWLCredits } from '../../Components'
 
-import { Switch, Route, Redirect } from 'react-router-dom';
+import { Switch, Route, Redirect } from 'react-router-dom'
 
 class HomePage extends Component {
   state = {
     isMenuOpen: false,
     currentPage: 'HOME',
-  };
+  }
 
   toggleMenu = () => {
     this.setState({ isMenuOpen: !this.state.isMenuOpen }, () => {
-      this.rotateIcon();
-    });
-  };
+      this.rotateIcon()
+    })
+  }
   setCurrentPage = (currentPage) => {
-    this.setState({ currentPage });
-  };
+    this.setState({ currentPage })
+  }
   rotateIcon = () => {
-    const plus = document.querySelector('#menu-icon');
+    const plus = document.querySelector('#menu-icon')
 
     if (this.state.isMenuOpen) {
-      plus.classList.add('rotate');
+      plus.classList.add('rotate')
     } else {
-      plus.classList.remove('rotate');
+      plus.classList.remove('rotate')
     }
-  };
+  }
 
   // renderMenu = () => {
   //   return <Menu toggleMenu={this.toggleMenu} />;
@@ -63,8 +63,8 @@ class HomePage extends Component {
           </Switch>
         </div>
       </>
-    );
+    )
   }
 }
 
-export default HomePage;
+export default HomePage

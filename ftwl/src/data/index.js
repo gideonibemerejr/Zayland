@@ -1,20 +1,23 @@
-import appleMusic from '../assets/images/appleMusic.svg';
-import spotify from '../assets/images/spotify.png';
-import tidal from '../assets/images/tidal.svg';
-import googlePlay from '../assets/images/googlePlay.png';
-import soundcloud from '../assets/images/soundcloud.png';
+import appleMusic from '../assets/images/appleMusic.svg'
+import spotify from '../assets/images/spotify.png'
+import tidal from '../assets/images/tidal.svg'
+import googlePlay from '../assets/images/googlePlay.png'
+import soundcloud from '../assets/images/soundcloud.png'
 
 export function getFTWLInfo() {
   return {
     trackNo: 0,
     route: '/credits',
-    intro: `From Texas, With Love is a letter from me to you. No matter where you're from you'll relate to the stories and experiences talked about throughout.`,
-    outro: `Thank you to Joaquin, Desiree, Madyson, Gideon, When Where What, Sharell, Austin, MSAW, Jordan and all of the people/fans who mad this possible and encouraged us to keep going. <br /><br />
+    intro: `From Texas, With Love is a letter from me to you. No matter where you're from you'll relate to the stories and experiences talked about throughout.
+    <br /><br />
     Love, <br />
     Zayland
+    <br />`,
+    outro: `Thank you to Joaquin, Desiree, Madyson, Gideon, When Where What, Sharell, Austin, MSAW, Jordan and all of the people/fans who mad this possible and encouraged us to keep going. 
+    
     `,
     media: 'https://zayland-assets.s3.amazonaws.com/videos/trafficlights.mp4',
-  };
+  }
 }
 
 export function getFTWLPlatforms() {
@@ -46,7 +49,7 @@ export function getFTWLPlatforms() {
       title: 'Apple Music',
       iconSrc: appleMusic,
     },
-  ];
+  ]
 }
 
 export function getVideos() {
@@ -59,7 +62,7 @@ export function getVideos() {
       url: 'https://www.youtube.com/embed/8YCQuLXMNWI',
       title: `Blue feat. Dee Gatti`,
     },
-  ];
+  ]
 }
 
 export function getSongRoutes() {
@@ -73,7 +76,7 @@ export function getSongRoutes() {
       route: '/credits/forgot-who-i-was',
       media: {
         type: 'photo',
-        src: '',
+        photos: ['https://zayland-assets.s3.amazonaws.com/images/forgot2.jpg'],
       },
     },
     {
@@ -84,8 +87,11 @@ export function getSongRoutes() {
       producers: ['Stefon Osae,', 'Zayland'],
       route: '/credits/st-thomas',
       media: {
-        type: 'photo',
-        src: '',
+        type: 'video',
+        videos: [
+          'https://zayland-assets.s3.amazonaws.com/videos/stthomas.mp4',
+          'https://zayland-assets.s3.amazonaws.com/videos/stthomas2.mp4',
+        ],
       },
     },
     {
@@ -109,7 +115,7 @@ export function getSongRoutes() {
       route: '/credits/simone',
       media: {
         type: 'photo',
-        src: '',
+        photos: ['https://zayland-assets.s3.amazonaws.com/images/simone2.jpg'],
       },
     },
     {
@@ -133,7 +139,10 @@ export function getSongRoutes() {
       route: '/credits/not-the-same',
       media: {
         type: 'photo',
-        src: '',
+        photos: [
+          'https://zayland-assets.s3.amazonaws.com/images/notthesame.jpg',
+          'https://zayland-assets.s3.amazonaws.com/images/notthesame2.jpg',
+        ],
       },
     },
     {
@@ -145,7 +154,10 @@ export function getSongRoutes() {
       route: '/credits/floating',
       media: {
         type: 'photo',
-        src: '',
+        photos: [
+          'https://zayland-assets.s3.amazonaws.com/images/floating.jpg',
+          'https://zayland-assets.s3.amazonaws.com/images/floating.jpg',
+        ],
       },
     },
     {
@@ -169,7 +181,10 @@ export function getSongRoutes() {
       route: '/credits/her-interlude',
       media: {
         type: 'photo',
-        src: '',
+        photos: [
+          'https://zayland-assets.s3.amazonaws.com/images/her.jpg',
+          'https://zayland-assets.s3.amazonaws.com/images/her2.jpg',
+        ],
       },
     },
     {
@@ -180,9 +195,9 @@ export function getSongRoutes() {
       producers: ['PKBeatz'],
       route: '/credits/wax-rose-freestyle',
       media: {
-        type: 'photo',
-        src: '',
+        type: 'video',
+        src: 'https://zayland-assets.s3.amazonaws.com/videos/freestyle.mp4',
       },
     },
-  ];
+  ]
 }
