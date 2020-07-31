@@ -146,7 +146,7 @@ class App extends Component {
                 rel='noopener noreferrer'
                 target='_blank'
                 className='link dim dark-gray f6 f5-l fw5 dib mr3 mr4-l'
-                href='https://www.youtube.com/watch?v=8YCQuLXMNWI'
+                href='https://www.zaylandxx.com/watch'
                 title='Watch'
               >
                 WATCH
@@ -158,7 +158,7 @@ class App extends Component {
                 }
                 title='Cart'
               >
-                CART
+                CART {`(${this.state.checkout.lineItems.length})`}
               </div>
             </div>
           </nav>
