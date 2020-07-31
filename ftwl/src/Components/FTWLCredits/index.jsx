@@ -1,11 +1,11 @@
-import React from 'react'
-import { Switch, Route, NavLink } from 'react-router-dom'
-import { getSongRoutes, getFTWLInfo } from '../../data'
-import { TrackNumber } from '../'
-import FTWLCreditDetail from '../FTWLCreditDetail'
+import React from 'react';
+import { Switch, Route, NavLink } from 'react-router-dom';
+import { getSongRoutes, getFTWLInfo } from '../../data';
+import { TrackNumber } from '../';
+import FTWLCreditDetail from '../FTWLCreditDetail';
 
-const songRoutes = getSongRoutes()
-const info = getFTWLInfo()
+const songRoutes = getSongRoutes();
+const info = getFTWLInfo();
 
 const FTWLCredits = () => {
   return (
@@ -32,6 +32,7 @@ const FTWLCredits = () => {
               },
             }}
             className='link outline-0'
+            activeClassName='black'
           >
             <TrackNumber trackNo={song.trackNo} route={song.route} />
           </NavLink>
@@ -57,7 +58,7 @@ const FTWLCredits = () => {
         <p className='dn-l db ts1 lh-copy'>Licensed by Zay's Land</p>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default FTWLCredits
+export default FTWLCredits;
