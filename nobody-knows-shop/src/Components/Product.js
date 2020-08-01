@@ -54,7 +54,6 @@ class Product extends Component {
   };
 
   render() {
-    console.log(this.state);
     let variantImages = this.props.product.images;
     let variant = this.state.selectedVariant || this.props.product.variants[0];
 

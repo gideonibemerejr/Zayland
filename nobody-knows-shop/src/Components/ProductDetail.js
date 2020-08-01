@@ -18,13 +18,16 @@ class ProductDetail extends Component {
       product.options.forEach((selector) => {
         defaultOptionValues[selector.name] = selector.values[0].value;
       });
-      this.setState({
-        product,
-        variantImages: product.images,
-        variant: product.variants[0],
-        selectedOptions: defaultOptionValues,
-        currentImage: 0,
-      });
+      this.setState(
+        {
+          product,
+          variantImages: product.images,
+          variant: product.variants[0],
+          selectedOptions: defaultOptionValues,
+          currentImage: 0,
+        },
+        () => console.log(this.state)
+      );
     });
   }
   handleImageNextClick = () => {
@@ -138,6 +141,7 @@ class ProductDetail extends Component {
             <h2 className='f3-ns f5 ttu tracked mb0 tc tl-l'>
               {this.state.product.title}
             </h2>
+            <p>{this.state.product.description}</p>
             <h3 className='f3-ns f4 tc tl-l ttu tracked mt3 fw6 black-70'>
               ${this.state.variant && this.state.variant.price | 0}
             </h3>
