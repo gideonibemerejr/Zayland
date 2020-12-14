@@ -182,45 +182,47 @@ class App extends Component {
               </div>
             </div>
           </nav>
-
-          {!this.state.isCartOpen && (
-            <Switch>
-              <Route
-                path='/products/:id'
-                render={({ match }) => (
-                  <ProductPage
-                    match={match}
-                    addVariantToCart={this.addVariantToCart}
-                    client={this.props.client}
-                  />
-                )}
-              />
-              <Route
-                path='/cart'
-                render={() => (
-                  <CartPage
-                    checkout={this.state.checkout}
-                    isCartOpen={this.state.isCartOpen}
-                    handleCartClose={this.handleCartClose}
-                    updateQuantityInCart={this.updateQuantityInCart}
-                    removeLineItemInCart={this.removeLineItemInCart}
-                  />
-                )}
-              />
-              <Route
-                exact
-                path='/'
-                render={() => (
-                  <HomePage
-                    setActiveProduct={this.setActiveProduct}
-                    products={this.state.products}
-                    client={this.props.client}
-                    addVariantToCart={this.addVariantToCart}
-                  />
-                )}
-              />
-            </Switch>
-          )}
+           <div className='vh-75 flex justify-center items-center'>
+                <h2>SHOP CLOSED</h2>
+           </div>
+//           {!this.state.isCartOpen && (
+//             <Switch>
+//               <Route
+//                 path='/products/:id'
+//                 render={({ match }) => (
+//                   <ProductPage
+//                     match={match}
+//                     addVariantToCart={this.addVariantToCart}
+//                     client={this.props.client}
+//                   />
+//                 )}
+//               />
+//               <Route
+//                 path='/cart'
+//                 render={() => (
+//                   <CartPage
+//                     checkout={this.state.checkout}
+//                     isCartOpen={this.state.isCartOpen}
+//                     handleCartClose={this.handleCartClose}
+//                     updateQuantityInCart={this.updateQuantityInCart}
+//                     removeLineItemInCart={this.removeLineItemInCart}
+//                   />
+//                 )}
+//               />
+//               <Route
+//                 exact
+//                 path='/'
+//                 render={() => (
+//                   <HomePage
+//                     setActiveProduct={this.setActiveProduct}
+//                     products={this.state.products}
+//                     client={this.props.client}
+//                     addVariantToCart={this.addVariantToCart}
+//                   />
+//                 )}
+//               />
+//             </Switch>
+//           )}
         </div>
       </>
     );
