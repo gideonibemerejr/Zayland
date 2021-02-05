@@ -244,6 +244,38 @@ export function getLetsGoPlatforms() {
   ];
 }
 
+export function getGetAwayPlatforms() {
+  return [
+    // {
+    //   link: 'https://soundcloud.com/thenuwavesound/sets/nkremixes',
+    //   title: 'Soundcloud',
+    //   iconSrc: soundcloud,
+    // },
+    {
+      link: 'https://open.spotify.com/track/6FAvHCoUSA8JOcY8501uJI',
+      title: 'Spotify',
+      iconSrc: spotify,
+    },
+    {
+      link: 'tidal.com/browse/track/172371218',
+      title: 'Tidal',
+      iconSrc: tidal,
+    },
+    // {
+    //   link:
+    //     '',
+    //   title: 'Google Play',
+    //   iconSrc: googlePlay,
+    // },
+    {
+      link:
+        'https://music.apple.com/us/album/get-away/1552227772?i=1552227773',
+      title: 'Apple Music',
+      iconSrc: appleMusic,
+    },
+  ];
+}
+
 export function getVideos() {
   return [
     {

@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
-import { getFTWLPlatforms } from '../../data';
+import { getGetAwayPlatforms } from '../../data';
 
-const platforms = getFTWLPlatforms();
+const platforms = getGetAwayPlatforms();
 const Home = ({ setCurrentPage }) => {
   useEffect(() => {
     setCurrentPage('HOME');
@@ -11,7 +11,7 @@ const Home = ({ setCurrentPage }) => {
       <section className='w-100 flex flex-column  justify-center items-center mh5-l pa2 pa0-ns mt5-l'>
         <div className='w-100 w-75-l h-75 mb2 flex justify-center items-center'>
           <img
-            src='https://zayland-assets.s3.amazonaws.com/images/FTWL.jpg'
+            src='https://imgur.com/LRfH4Hv.jpg'
             alt=''
             className='w-50-ns w-100'
           />
