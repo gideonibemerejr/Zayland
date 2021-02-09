@@ -212,37 +212,37 @@ export function getStThomasPlatforms() {
 	];
 }
 
-export function getLetsGoPlatforms() {
-	return [
-		// {
-		//   link: 'https://soundcloud.com/thenuwavesound/sets/nkremixes',
-		//   title: 'Soundcloud',
-		//   iconSrc: soundcloud,
-		// },
-		{
-			link: "https://open.spotify.com/album/2Sz4V0YWLjMSzeWqVpUYpY",
-			title: "Spotify",
-			iconSrc: spotify,
-		},
-		{
-			link: "https://tidal.com/browse/album/146828472",
-			title: "Tidal",
-			iconSrc: tidal,
-		},
-		{
-			link:
-				"https://play.google.com/store/music/album/Zayland_Let_s_Go_feat_Randy_Class?id=Brymedclcxslrb5jz6nxnnfczoa",
-			title: "Google Play",
-			iconSrc: googlePlay,
-		},
-		{
-			link:
-				"https://music.apple.com/us/album/lets-go-feat-randy-class-single/1521268708",
-			title: "Apple Music",
-			iconSrc: appleMusic,
-		},
-	];
-}
+// export function getLetsGoPlatforms() {
+// 	return [
+// 		// {
+// 		//   link: 'https://soundcloud.com/thenuwavesound/sets/nkremixes',
+// 		//   title: 'Soundcloud',
+// 		//   iconSrc: soundcloud,
+// 		// },
+// 		{
+// 			link: "https://open.spotify.com/album/2Sz4V0YWLjMSzeWqVpUYpY",
+// 			title: "Spotify",
+// 			iconSrc: spotify,
+// 		},
+// 		{
+// 			link: "https://tidal.com/browse/album/146828472",
+// 			title: "Tidal",
+// 			iconSrc: tidal,
+// 		},
+// 		{
+// 			link:
+// 				"https://play.google.com/store/music/album/Zayland_Let_s_Go_feat_Randy_Class?id=Brymedclcxslrb5jz6nxnnfczoa",
+// 			title: "Google Play",
+// 			iconSrc: googlePlay,
+// 		},
+// 		{
+// 			link:
+// 				"https://music.apple.com/us/album/lets-go-feat-randy-class-single/1521268708",
+// 			title: "Apple Music",
+// 			iconSrc: appleMusic,
+// 		},
+// 	];
+// }
 
 export function getGetAwayPlatforms() {
 	return [
