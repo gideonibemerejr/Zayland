@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 // import { getGetAwayPlatforms } from '../../data';
-import { EventbriteButton } from "../";
+import { Button } from "../";
 import flyer from "../../assets/images/site-flyer.png";
 // const platforms = getGetAwayPlatforms();
 const Home = ({ setCurrentPage }) => {
@@ -14,14 +14,25 @@ const Home = ({ setCurrentPage }) => {
 					<img src={flyer} alt="" className="w-50-ns w-100" />
 				</div>
 				<div className="flex flex-column justify-center items-center mt4 pa2">
-					<EventbriteButton
+					{/* <EventbriteButton
 						classNames="mr4"
 						// isLoading={}
 						ebEventId={145310251875}
 					>
 						Get Tickets
-					</EventbriteButton>
-					<p className="serif white f3-ns f4">
+					</EventbriteButton> */}
+					<Button>
+						<a
+							rel="nopenner noreferrer"
+							target="_blank"
+							className="link hover-white white"
+							href="https://www.eventbrite.com/e/the-nu-wave-in-dallas-with-love-hosted-by-zayland-tickets-145310251875"
+						>
+							{" "}
+							Get Tickets
+						</a>
+					</Button>
+					<p className="serif white f6 mt4">
 						Powered by{" "}
 						<a
 							className="link hover-red white fw7 i"
