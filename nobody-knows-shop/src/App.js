@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import { Switch, Route, Link } from "react-router-dom";
 
 import { grainedService } from "./utils";
-import { CartPage } from "./Pages";
+import { HomePage, ProductPage, CartPage } from "./Pages";
 
 class App extends Component {
 	state = {
@@ -121,15 +121,15 @@ class App extends Component {
 	};
 
 	// renderCartTotal = () => {
-	//   let totalToAddTo = this.state.total;
-	//   this.state.checkout.lineItems.forEach((lineItem) =>
-	//     lineItem.variableValues.lineItems.forEach(
-	//       (item) => (totalToAddTo = totalToAddTo + item.quantity)
-	//     )
-	//   );
-	//   this.updateTotal(totalToAddTo);
-	//   console.log(totalToAddTo);
-	//   return totalToAddTo;
+	// 	let totalToAddTo = this.state.total;
+	// 	this.state.checkout.lineItems.forEach((lineItem) =>
+	// 		lineItem.variableValues.lineItems.forEach(
+	// 			(item) => (totalToAddTo = totalToAddTo + item.quantity)
+	// 		)
+	// 	);
+	// 	// this.updateTotal(totalToAddTo);
+	// 	// console.log(totalToAddTo);
+	// 	return totalToAddTo;
 	// };
 
 	render() {
@@ -140,7 +140,7 @@ class App extends Component {
 				<div id="grained" className="home-grid">
 					<nav className="db dt-l w-100 border-box pa3 ph5-l relative">
 						<Link
-							className="db dtc-l v-mid mid-gray link dim w-100 w-25-l tc tl-l mb2 mb0-l"
+							className="db dtc-l v-mid white link dim w-100 w-25-l tc tl-l mb2 mb0-l"
 							to="/"
 							title="Home"
 						>
@@ -148,14 +148,14 @@ class App extends Component {
 						</Link>
 						<div className="db dtc-l v-mid w-100 w-75-l tc tr-l">
 							<a
-								className="link dim dark-gray f6 f5-l  fw5 dib mr3 mr4-l"
+								className="link dim white f6 f5-l  fw5 dib mr3 mr4-l"
 								href="https://www.zaylandxx.com/"
 								title="Music"
 							>
 								MUSIC
 							</a>
 							<a
-								className="link dim dark-gray f6 f5-l fw5 dib mr3 mr4-l"
+								className="link dim white f6 f5-l fw5 dib mr3 mr4-l"
 								href="https://www.zaylandxx.com/credits"
 								title="Credits"
 							>
@@ -164,27 +164,65 @@ class App extends Component {
 							<a
 								rel="noopener noreferrer"
 								target="_blank"
-								className="link dim dark-gray f6 f5-l fw5 dib mr3 mr4-l"
+								className="link dim white f6 f5-l fw5 dib mr3 mr4-l"
 								href="https://www.zaylandxx.com/watch"
 								title="Watch"
 							>
 								WATCH
 							</a>
 							<div
-								className="pointer link dim dark-gray f6 f5-l fw5 dib "
+								className="pointer link dim white f6 f5-l fw5 dib "
 								onClick={() =>
 									this.setState({ isCartOpen: !this.state.isCartOpen })
 								}
 								title="Cart"
 							>
 								CART
-								{/* {`(${this.renderCartTotal()})`} */}
+								{/* {`(${this.renderCartTotal()})`}  */}
 							</div>
 						</div>
 					</nav>
-					<div className="vh-75 flex justify-center items-center">
+					{/* <div className="vh-75 flex justify-center items-center">
 						<h2>SHOP CLOSED</h2>
-					</div>
+					</div> */}
+					{!this.state.isCartOpen && (
+						<Switch>
+							<Route
+								path="/products/:id"
+								render={({ match }) => (
+									<ProductPage
+										match={match}
+										addVariantToCart={this.addVariantToCart}
+										client={this.props.client}
+									/>
+								)}
+							/>
+							<Route
+								path="/cart"
+								render={() => (
+									<CartPage
+										checkout={this.state.checkout}
+										isCartOpen={this.state.isCartOpen}
+										handleCartClose={this.handleCartClose}
+										updateQuantityInCart={this.updateQuantityInCart}
+										removeLineItemInCart={this.removeLineItemInCart}
+									/>
+								)}
+							/>
+							<Route
+								exact
+								path="/"
+								render={() => (
+									<HomePage
+										setActiveProduct={this.setActiveProduct}
+										products={this.state.products}
+										client={this.props.client}
+										addVariantToCart={this.addVariantToCart}
+									/>
+								)}
+							/>
+						</Switch>
+					)}
 				</div>
 			</>
 		);
