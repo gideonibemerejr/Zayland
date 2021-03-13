@@ -113,21 +113,27 @@ class Product extends Component {
             </div>
           )}
         </div> */}
-				<Link
-					to={`/products/${this.props.product.id}`}
-					className="ph2 ph0-ns pb3 link db"
-				>
-					<div className="w-100 flex flex-column justify-center items-center">
-						<div className=" db-l flex flex-column justify-center items-center">
-							<h2 className="f3-ns f5 ttu tracked mb0 tc white">
-								{this.props.product.title}
-							</h2>
-							<p className="tc red">{this.props.product.description}</p>
-							<h3 className="f2-ns f3 tc ttu tracked mt3 fw6 black-70 white">
-								${this.props.product?.variants[0]?.price | 0}
-							</h3>
 
-							{/* <div className="mt2 flex flex-column-m flex-row items-center justify-center justify-around w-100">
+				<div className="w-100 flex flex-column justify-center items-center">
+					<div className=" db-l flex flex-column justify-center items-center">
+						<h2 className="f3-ns f5 ttu tracked mb0 tc white">
+							{this.props.product.title}
+						</h2>
+						<p className="tc red">{this.props.product.description}</p>
+						<h3 className="f2-ns f3 tc ttu tracked mt3 fw6 black-70 white">
+							${this.props.product?.variants[0]?.price | 0}
+						</h3>
+						<Link
+							to={`/products/${this.props.product.id}`}
+							className="ph2 ph0-ns pb3 link db pointer"
+						>
+							<div className="mt4-ns mt4 mx-auto flex justify-center">
+								<button className="f3-ns f5 pa2 bg-transparent b--white bw1 button w-50-l w-100 white fw5">
+									SELECT SIZE
+								</button>
+							</div>
+						</Link>
+						{/* <div className="mt2 flex flex-column-m flex-row items-center justify-center justify-around w-100">
 							{this.state.product.options &&
 								this.state.product.options.map((option) => {
 									return (
@@ -155,7 +161,7 @@ class Product extends Component {
 								/>
 							</div>
 						</div> */}
-							{/* <div className="mt4-ns mt4 mx-auto flex justify-center">
+						{/* <div className="mt4-ns mt4 mx-auto flex justify-center">
 							<button
 								className="f3-ns f5 pa2 bg-transparent b--black bw1 button w-50-l w-100 black fw5"
 								onClick={() =>
@@ -168,9 +174,8 @@ class Product extends Component {
 								ADD TO CART
 							</button>
 						</div> */}
-						</div>
 					</div>
-				</Link>
+				</div>
 			</div>
 
 			// <article className='fl w-100 w-50-m w-40-ns pa5-ns'>
