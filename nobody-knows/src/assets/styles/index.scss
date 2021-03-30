@@ -84,22 +84,6 @@ div.menu-button {
 	background-repeat: no-repeat;
 }
 
-@media screen and (max-width: 30em) {
-	.player {
-		height: 50vmin;
-	}
-	.song-player {
-		width: 80vmin;
-		left: 1rem;
-	}
-}
-
-@media screen and (min-width: 60em) {
-	.player {
-		height: 50vmin;
-	}
-}
-
 .song-player {
 	display: grid;
 	grid-template-rows: 2rem 1fr;
@@ -138,5 +122,26 @@ div.menu-button {
 		border: 1.5px solid white;
 		border-radius: 50%;
 		background-color: red;
+	}
+}
+@media screen and (min-width: 30em) and (max-width: 60em) {
+	.vh-85-m {
+		height: 85vh;
+	}
+}
+
+@media screen and (max-width: 30em) {
+	.player {
+		height: 50vmin;
+	}
+	.song-player {
+		width: 80vmin;
+		left: 1rem;
+	}
+}
+
+@media screen and (min-width: 60em) {
+	.player {
+		height: 50vmin;
 	}
 }

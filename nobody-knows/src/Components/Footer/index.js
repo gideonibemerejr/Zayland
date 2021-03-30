@@ -3,8 +3,8 @@ import { Instagram, Twitter } from "..";
 
 const Footer = () => {
 	return (
-		<nav className="db dt-l w-100 border-box pa3 ph5-l absolute bottom-0">
-			<ul className="list flex ma0 pa0 items-center">
+		<nav className="db dt-l w-100 border-box pa3 ph5-l absolute-l bottom-0-l">
+			<ul className="list flex ma0 pa0 items-center justify-start-l justify-center">
 				<a
 					className="db dtc-l v-mid white link dim tc tl-l mb2 mb0-l mr3"
 					href="https://www.instagram.com/zaylandxx"

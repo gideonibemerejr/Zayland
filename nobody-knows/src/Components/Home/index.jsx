@@ -60,29 +60,31 @@ const Home = ({ setCurrentPage, history, user, setUser }) => {
 				</main>
 			)}
 			{showSong && (
-				<div className="song-player absolute bottom--0">
-					<h2 className="title fw3 f5 ttu flex items-center white">
-						&nbsp;Mileage prod. tokyo ave
-					</h2>
-					{/* <p>{formatTime(curTime)}</p>
+				<div className="flex justify-center items-end vh-75-l vh-85-m vh-75">
+					<div className="song-player absolute-l">
+						<h2 className="title fw3 f5 ttu flex items-center white">
+							&nbsp;Mileage prod. tokyo ave
+						</h2>
+						{/* <p>{formatTime(curTime)}</p>
 				<p>{formatTime(duration)}</p> */}
-					<div
-						className="pointer white ba bt-0 b--white h-100 ma0 flex justify-center items-center"
-						onClick={toggle}
-					>
-						{playing ? <Pause /> : <Play />}
-					</div>
-					<div className="bb b--white">
 						<div
-							className="bar__progress "
-							style={{ width: `${curPercentage - 1}%` }}
-						/>
-					</div>
+							className="pointer white ba bt-0 b--white h-100 ma0 flex justify-center items-center"
+							onClick={toggle}
+						>
+							{playing ? <Pause /> : <Play />}
+						</div>
+						<div className="bb b--white">
+							<div
+								className="bar__progress "
+								style={{ width: `${curPercentage - 1}%` }}
+							/>
+						</div>
 
-					<div className="pointer white ba bt-0 b--white h-100 ma0 flex justify-center items-center">
-						<a href={demoTrackURL} download className="white link dim">
-							<Download />
-						</a>
+						<div className="pointer white ba bt-0 b--white h-100 ma0 flex justify-center items-center">
+							<a href={demoTrackURL} download className="white link dim">
+								<Download />
+							</a>
+						</div>
 					</div>
 				</div>
 			)}
