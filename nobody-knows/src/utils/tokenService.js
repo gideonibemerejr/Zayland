@@ -22,7 +22,6 @@ function getToken() {
 
 function getUserFromToken() {
 	const token = getToken();
-	console.log(token);
 
 	return token ? JSON.parse(atob(token.split(".")[1])).id : null;
 }

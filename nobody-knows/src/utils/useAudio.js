@@ -14,7 +14,6 @@ const useAudio = (url) => {
 	}, [playing, audio]);
 
 	useEffect(() => {
-		console.log(audio.currentTime);
 		const setAudioData = () => {
 			setDuration(audio.duration);
 			setCurTime(audio.currentTime);

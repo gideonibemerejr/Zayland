@@ -24,25 +24,9 @@ const Nav = ({ toggleMenu, user }) => {
 				<h1 className="ma0 f3 f3-l">ZAYLAND</h1>
 			</Link>
 			<div className="db dtc-l v-mid w-100 w-75-l tc tr-l">
-				{name ? (
+				{name && (
 					<p className=" red f6 f5-l fw5 dib mr3 mr4-l">
 						Enjoy the song, {name}
-					</p>
-				) : window.location.href.indexOf("login") > -1 ? (
-					<p className="white">
-						Haven't registered?&nbsp;
-						<Link className="link dim red  fw5 dib" to="/">
-							Register now&nbsp;
-						</Link>
-						to listen.
-					</p>
-				) : (
-					<p className="red">
-						Already registered?&nbsp;
-						<Link className="link dim blue fw5 dib" to="/login">
-							Login&nbsp;
-						</Link>
-						to listen.
 					</p>
 				)}
 				{/* <Link

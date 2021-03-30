@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 // import { getGetAwayPlatforms } from '../../data';
-import { DemoForm, Play, Pause, Download } from "../";
+import { Play, Pause, Download, LoginForm } from "../";
 
 import useAudio from "../../utils/useAudio";
 import { demoTrackURL } from "../../data";
@@ -13,7 +13,6 @@ const Home = ({ setCurrentPage, history, user, setUser }) => {
 	}, [setCurrentPage]);
 
 	useEffect(() => {
-		console.log(user);
 		if (user) {
 			setShowSong(true);
 			toggle();
@@ -39,7 +38,7 @@ const Home = ({ setCurrentPage, history, user, setUser }) => {
 				<main className="w-100 h-100-l flex justify-center items-center">
 					<section className="w-100  flex flex-column  justify-center items-center mh5-l pa2 pa0-ns mt5-l">
 						<div className="w-100 w-75-l h-75 mb2 flex justify-center items-center">
-							<DemoForm
+							<LoginForm
 								toggle={toggle}
 								setShowSong={setShowSong}
 								setUser={setUser}

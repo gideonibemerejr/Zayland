@@ -2,47 +2,37 @@ import React, { useState } from "react";
 import userService from "../../utils/userService";
 import { Button } from "../";
 
-const LoginForm = ({ setShowSong, toggle }) => {
+const LoginForm = ({ setShowSong, toggle, setUser }) => {
 	const [password, setPassword] = useState("");
-	const [email, setEmail] = useState("");
+	const [username, setUsername] = useState("zayland");
 	const [error, setError] = useState("");
 
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 
 		const submittingUser = {
-			identifier: email,
+			identifier: username,
 			password,
 		};
 
-		try {
-			const user = await userService.login(submittingUser);
-			if (user) {
-				setShowSong(true);
-				toggle();
-			}
-		} catch (error) {
-			setError("Something isn't right--please try again");
-		}
+		const user = await userService.login(submittingUser);
+
+		setUser(user?.firstName);
+		setShowSong(true);
+		toggle();
 	};
 	return (
 		<form onSubmit={handleSubmit}>
 			<div className="w-100 flex flex-column justify-center items-center">
-				<h2 className="white tc">
-					Welcome back <br /> Login to hear the demo!
-				</h2>
-
 				<div className="mv4 w-100">
-					<label className="db fw4 lh-copy f5 red" htmlFor="email">
-						Email address
-					</label>
 					<input
 						className="pa2 input-reset white bb b--white br-0 bl-0 bt-0 bg-transparent w-100 measure"
-						type="email"
-						name="email"
-						id="email"
-						value={email}
-						onChange={(e) => setEmail(e.target.value)}
+						type="text"
+						name="username"
+						id="username"
+						value={username}
+						onChange={(e) => setUsername(e.target.value)}
+						hidden
 					/>
 				</div>
 				<div className="mv4 w-100">
@@ -64,7 +54,7 @@ const LoginForm = ({ setShowSong, toggle }) => {
 					</div>
 				)}
 				<div className="mv4 w-100 flex justify-center items-center">
-					<Button>Login</Button>
+					<Button>ENTER</Button>
 				</div>
 			</div>
 		</form>

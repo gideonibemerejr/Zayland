@@ -31,16 +31,12 @@ function getUser() {
 function login(user) {
 	axios.post(`${API_URL}/auth/local`, user).then((res) => {
 		// Handle success.
-		console.log("Well done!");
-		console.log("User profile", res.data.user);
-		console.log("User token", res.data.jwt);
 
 		if (res.data.user && res.data.jwt) {
 			tokenService.setToken(res.data.jwt);
 			return res.data.user;
 		}
 	});
-	throw new Error("Something Went Wrong");
 }
 
 export default {
