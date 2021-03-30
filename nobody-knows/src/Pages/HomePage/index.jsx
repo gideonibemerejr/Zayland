@@ -1,12 +1,14 @@
 import React, { Component } from "react";
 
-import { Nav, Menu, Home, Watch } from "../../Components";
+import { Nav, Footer, Menu, Home } from "../../Components";
+import { Login } from "../../Pages";
 import { Switch, Route, Redirect } from "react-router-dom";
-
+import userService from "../../utils/userService";
 class HomePage extends Component {
 	state = {
 		isMenuOpen: false,
 		currentPage: "HOME",
+		user: null,
 	};
 
 	toggleMenu = () => {
@@ -31,21 +33,48 @@ class HomePage extends Component {
 		return <Menu toggleMenu={this.toggleMenu} />;
 	};
 
+	async componentDidMount() {
+		const user = await userService.getUser();
+
+		if (user && user.firstName) {
+			this.setState({ user: user.firstName });
+		}
+		// userService.getUser().then((res) => {
+		// 	if (res.firstName) {
+		// 		this.setState({ user: res.firstName });
+		// 	}
+		// });
+	}
+
+	setUser = (firstName) => {
+		this.setState({ user: firstName });
+	};
 	render() {
 		return (
 			<>
 				{/* {this.state.isMenuOpen && this.renderMenu()} */}
 
 				<div
-					className={`homepage--container bg-dallas-wave
-           pa2 flex flex-column items-center`}
+					className={`homepage--container bg-mileage
+           pa2 flex flex-column items-center w-100`}
 				>
-					{/* <Nav toggleMenu={this.toggleMenu} /> */}
+					<Nav toggleMenu={this.toggleMenu} user={this.state.user} />
 					<Switch>
 						<Route
 							exact
 							path="/"
-							render={() => <Home setCurrentPage={this.setCurrentPage} />}
+							render={({ history }) => (
+								<Home
+									setCurrentPage={this.setCurrentPage}
+									history={history}
+									user={this.state.user}
+									setUser={this.setUser}
+								/>
+							)}
+						/>
+						<Route
+							path="/login"
+							render={() => <Login setCurrentPage={this.setCurrentPage} />}
 						/>
 						{/* <Route
               path='/nobody-knows'
@@ -61,8 +90,10 @@ class HomePage extends Component {
 							path="/watch"
 							render={() => <Watch setCurrentPage={this.setCurrentPage} />}
 						/> */}
+
 						<Redirect to="/" />
 					</Switch>
+					{this.state.user && <Footer />}
 				</div>
 			</>
 		);

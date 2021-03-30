@@ -6,7 +6,7 @@ const Button = ({ children, handleClick, disabled, ...rest }) => {
 			onClick={handleClick}
 			disabled={disabled}
 			{...rest}
-			className="serif f3 link bg-transparent hover-bg-red hover-white br2 ba bw1 b--red ph3 pv2 dib white pointer"
+			className="f3 link bg-transparent hover-bg-red hover-white br2 ba bw1 b--red ph3 pv2 dib white pointer"
 		>
 			{children}
 		</button>

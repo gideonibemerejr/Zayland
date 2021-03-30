@@ -342,3 +342,6 @@ export function getAlbumCredits() {
 		},
 	};
 }
+
+export const demoTrackURL =
+	"https://zayland-uploads.s3.amazonaws.com/mileage_prod_Tokyo_Ave_86e7e85dd7.mp3";

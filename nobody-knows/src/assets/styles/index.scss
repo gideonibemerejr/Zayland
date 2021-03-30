@@ -73,6 +73,17 @@ div.menu-button {
 	background-repeat: repeat;
 }
 
+.bg-mileage {
+	min-height: 100vh;
+	height: 100%;
+
+	background-image: url("https://zayland-uploads.s3.amazonaws.com/IMG_8266_min_3ced0d5027.gif");
+	// background: #000000;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
 @media screen and (max-width: 30em) {
 	.player {
 		height: 50vmin;
@@ -82,5 +93,46 @@ div.menu-button {
 @media screen and (min-width: 60em) {
 	.player {
 		height: 50vmin;
+	}
+}
+
+.player {
+	display: grid;
+	grid-template-rows: 2rem 1fr;
+	grid-template-columns: calc(80px - 2rem) 1fr calc(80px - 2rem);
+	grid-template-areas:
+		"title   title     title"
+		"btn     progress  download";
+
+	width: 400px;
+	height: 80px;
+
+	bottom: 5rem;
+	left: 4rem;
+}
+
+.title {
+	margin: 0;
+	grid-area: title;
+	grid-column: span 3;
+	border: 1px solid white;
+}
+
+.bar__progress {
+	flex: 1;
+	height: calc(80px - 2rem);
+	width: 1px;
+	background-color: white;
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+
+	.bar__progress--knob {
+		position: relative;
+		height: 8px;
+		width: 8px;
+		border: 1.5px solid white;
+		border-radius: 50%;
+		background-color: red;
 	}
 }
