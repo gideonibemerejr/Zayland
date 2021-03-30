@@ -17,9 +17,14 @@ const LoginForm = ({ setShowSong, toggle, setUser }) => {
 
 		const user = await userService.login(submittingUser);
 
-		setUser(user?.firstName);
-		setShowSong(true);
-		toggle();
+		if (user?.username) {
+			console.log(user);
+			setUser(user);
+			setShowSong(true);
+			toggle();
+		} else {
+			setError("Incorrect Password");
+		}
 	};
 	return (
 		<form onSubmit={handleSubmit}>

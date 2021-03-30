@@ -88,6 +88,10 @@ div.menu-button {
 	.player {
 		height: 50vmin;
 	}
+	.song-player {
+		width: 80vmin;
+		left: 1rem;
+	}
 }
 
 @media screen and (min-width: 60em) {
@@ -96,7 +100,7 @@ div.menu-button {
 	}
 }
 
-.player {
+.song-player {
 	display: grid;
 	grid-template-rows: 2rem 1fr;
 	grid-template-columns: calc(80px - 2rem) 1fr calc(80px - 2rem);
@@ -104,7 +108,7 @@ div.menu-button {
 		"title   title     title"
 		"btn     progress  download";
 
-	width: 400px;
+	width: 50vmin;
 	height: 80px;
 
 	bottom: 5rem;

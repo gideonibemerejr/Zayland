@@ -29,14 +29,20 @@ function getUser() {
 }
 
 function login(user) {
-	axios.post(`${API_URL}/auth/local`, user).then((res) => {
-		// Handle success.
-
-		if (res.data.user && res.data.jwt) {
-			tokenService.setToken(res.data.jwt);
-			return res.data.user;
-		}
-	});
+	return axios
+		.post(`${API_URL}/auth/local`, user)
+		.then((res) => {
+			// Handle success.
+			console.log(res);
+			if (res.data.user && res.data.jwt) {
+				tokenService.setToken(res.data.jwt);
+				return res.data.user;
+			}
+			throw new Error("Something Went Wrong");
+		})
+		.catch((error) => {
+			return error;
+		});
 }
 
 export default {

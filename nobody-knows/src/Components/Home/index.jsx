@@ -60,7 +60,7 @@ const Home = ({ setCurrentPage, history, user, setUser }) => {
 				</main>
 			)}
 			{showSong && (
-				<div className="player absolute bottom--0">
+				<div className="song-player absolute bottom--0">
 					<h2 className="title fw3 f5 ttu flex items-center white">
 						&nbsp;Mileage prod. tokyo ave
 					</h2>
