@@ -76,7 +76,7 @@ const Home = ({ setCurrentPage, history, user, setUser }) => {
 						<div className="bb b--white">
 							<div
 								className="bar__progress "
-								style={{ width: `${curPercentage - 1}%` }}
+								style={{ width: `${curPercentage}%` }}
 							/>
 						</div>
 
