@@ -55,7 +55,7 @@ class HomePage extends Component {
 				{/* {this.state.isMenuOpen && this.renderMenu()} */}
 
 				<div
-					className={`homepage--container bg-mileage
+					className={`homepage--container bg-black
            pa2 flex flex-column items-center w-100`}
 				>
 					<Nav toggleMenu={this.toggleMenu} user={this.state.user} />
@@ -67,8 +67,8 @@ class HomePage extends Component {
 								<Home
 									setCurrentPage={this.setCurrentPage}
 									history={history}
-									user={this.state.user}
-									setUser={this.setUser}
+									// user={this.state.user}
+									// setUser={this.setUser}
 								/>
 							)}
 						/>

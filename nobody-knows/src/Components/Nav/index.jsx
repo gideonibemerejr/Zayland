@@ -29,13 +29,15 @@ const Nav = ({ toggleMenu, user }) => {
 						Enjoy the song, {name}
 					</p>
 				)}
-				{/* <Link
-          className='link dim pink f6 f5-l fw5 dib mr3 mr4-l'
-          to='/'
-          title='Home'
-        >
-          HOME
-        </Link> */}
+				<a
+					className="link dim red f6 f5-l fw7 dib mr3 mr4-l"
+					href="https://www.youtube.com/watch?v=wdrb-E7DdLE"
+					title="Video"
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					VIDEO
+				</a>
 				{/* <Link
           className='link dim yellow f6 f5-l fw5 dib mr3 mr4-l'
           to='/nobody-knows'

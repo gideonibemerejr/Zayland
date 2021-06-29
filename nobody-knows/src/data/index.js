@@ -49,6 +49,68 @@ export function getAlbums() {
 	];
 }
 
+export function getICantFeel() {
+	return [
+		// {
+		//   link: 'https://soundcloud.com/thenuwavesound/sets/nkremixes',
+		//   title: 'Soundcloud',
+		//   iconSrc: soundcloud,
+		// },
+		{
+			link: "https://open.spotify.com/track/4ivUialVSkQraQRHJ0fOQF?si=G1tQyea1QdaiZH6Tbe9hDg&dl_branch=1",
+			title: "Spotify",
+			iconSrc: spotify,
+		},
+		{
+			link: "https://tidal.com/album/188529078",
+			title: "Tidal",
+			iconSrc: tidal,
+		},
+		// {
+		//   link:
+		//     '',
+		//   title: 'Google Play',
+		//   iconSrc: googlePlay,
+		// },
+		{
+			link: "https://music.apple.com/us/album/i-cant-feel-single/1573340190",
+			title: "Apple Music",
+			iconSrc: appleMusic,
+		},
+	];
+}
+
+export function get333Platforms() {
+	return [
+		// {
+		//   link: 'https://soundcloud.com/thenuwavesound/sets/nkremixes',
+		//   title: 'Soundcloud',
+		//   iconSrc: soundcloud,
+		// },
+		{
+			link: "https://open.spotify.com/album/0sO9zINLTxt3jiekqO56T6?si=jbXP-2YoQYqj-jq80mQLpg",
+			title: "Spotify",
+			iconSrc: spotify,
+		},
+		{
+			link: "https://tidal.com/album/181838108",
+			title: "Tidal",
+			iconSrc: tidal,
+		},
+		// {
+		//   link:
+		//     '',
+		//   title: 'Google Play',
+		//   iconSrc: googlePlay,
+		// },
+		{
+			link: "https://music.apple.com/us/album/333-single/1564625862",
+			title: "Apple Music",
+			iconSrc: appleMusic,
+		},
+	];
+}
+
 export function getNobodyKnowsPlatforms() {
 	return [
 		{
@@ -67,14 +129,12 @@ export function getNobodyKnowsPlatforms() {
 			iconSrc: tidal,
 		},
 		{
-			link:
-				"https://play.google.com/store/music/album/Zayland_Nobody_Knows?id=Bwa6a2jeu4ewa2gpvqcl7a7lwki",
+			link: "https://play.google.com/store/music/album/Zayland_Nobody_Knows?id=Bwa6a2jeu4ewa2gpvqcl7a7lwki",
 			title: "Google Play",
 			iconSrc: googlePlay,
 		},
 		{
-			link:
-				"http://geo.music.apple.com/us/album/nobody-knows-ep/1502401893?mt=1&app=music",
+			link: "http://geo.music.apple.com/us/album/nobody-knows-ep/1502401893?mt=1&app=music",
 			title: "Apple Music",
 			iconSrc: appleMusic,
 		},
@@ -99,14 +159,12 @@ export function getRemixesPlatforms() {
 			iconSrc: tidal,
 		},
 		{
-			link:
-				"https://play.google.com/store/music/album/Zayland_Nobody_Knows_The_Remixes?id=Bzgegybuxruyk35rkugjswj436u&hl=en_US",
+			link: "https://play.google.com/store/music/album/Zayland_Nobody_Knows_The_Remixes?id=Bzgegybuxruyk35rkugjswj436u&hl=en_US",
 			title: "Google Play",
 			iconSrc: googlePlay,
 		},
 		{
-			link:
-				"https://music.apple.com/us/album/nobody-knows-the-remixes/1512557872",
+			link: "https://music.apple.com/us/album/nobody-knows-the-remixes/1512557872",
 			title: "Apple Music",
 			iconSrc: appleMusic,
 		},
@@ -121,8 +179,7 @@ export function getFTWLPlatforms() {
 			iconSrc: soundcloud,
 		},
 		{
-			link:
-				"https://open.spotify.com/album/4DdbYsC0c7ie5r84RpnnhH?si=oP2YcFMhQKe0DvHDA02YFA",
+			link: "https://open.spotify.com/album/4DdbYsC0c7ie5r84RpnnhH?si=oP2YcFMhQKe0DvHDA02YFA",
 			title: "Spotify",
 			iconSrc: spotify,
 		},
@@ -132,8 +189,7 @@ export function getFTWLPlatforms() {
 			iconSrc: tidal,
 		},
 		{
-			link:
-				"https://play.google.com/store/music/album/Zayland_From_Texas_With_Love?id=B72opw2tmrzvpuez5dmj3wmuqgm",
+			link: "https://play.google.com/store/music/album/Zayland_From_Texas_With_Love?id=B72opw2tmrzvpuez5dmj3wmuqgm",
 			title: "Google Play",
 			iconSrc: googlePlay,
 		},
@@ -153,8 +209,7 @@ export function get500DegreesPlatforms() {
 		//   iconSrc: soundcloud,
 		// },
 		{
-			link:
-				"https://open.spotify.com/track/2UpKuVhFAFvMKJ4LSkyNQx?si=O8Wse0vrR3uQHf07-stsag",
+			link: "https://open.spotify.com/track/2UpKuVhFAFvMKJ4LSkyNQx?si=O8Wse0vrR3uQHf07-stsag",
 			title: "Spotify",
 			iconSrc: spotify,
 		},
@@ -164,14 +219,12 @@ export function get500DegreesPlatforms() {
 			iconSrc: tidal,
 		},
 		{
-			link:
-				"https://play.google.com/store/music/album/Zayland_500_Degrees_feat_Dee_Gatti?id=Bau2mlt6dddc56jivvz7tcavtee",
+			link: "https://play.google.com/store/music/album/Zayland_500_Degrees_feat_Dee_Gatti?id=Bau2mlt6dddc56jivvz7tcavtee",
 			title: "Google Play",
 			iconSrc: googlePlay,
 		},
 		{
-			link:
-				"https://music.apple.com/us/album/500-degrees-feat-dee-gatti/1521365033?i=1521365034",
+			link: "https://music.apple.com/us/album/500-degrees-feat-dee-gatti/1521365033?i=1521365034",
 			title: "Apple Music",
 			iconSrc: appleMusic,
 		},
@@ -181,14 +234,12 @@ export function get500DegreesPlatforms() {
 export function getStThomasPlatforms() {
 	return [
 		{
-			link:
-				"https://soundcloud.com/zaylandxx/st-thomas-feat-luna-luna-prod-stefon-osae-zayland/s-Fx9M4ZFgIls",
+			link: "https://soundcloud.com/zaylandxx/st-thomas-feat-luna-luna-prod-stefon-osae-zayland/s-Fx9M4ZFgIls",
 			title: "Soundcloud",
 			iconSrc: soundcloud,
 		},
 		{
-			link:
-				"https://open.spotify.com/track/6MssFSHlGodAFGZWnXDcLC?si=R_a9_rTHQwC-Q7lgrBs6wQ",
+			link: "https://open.spotify.com/track/6MssFSHlGodAFGZWnXDcLC?si=R_a9_rTHQwC-Q7lgrBs6wQ",
 			title: "Spotify",
 			iconSrc: spotify,
 		},
@@ -198,14 +249,12 @@ export function getStThomasPlatforms() {
 			iconSrc: tidal,
 		},
 		{
-			link:
-				"https://play.google.com/store/music/artist?id=Azl7u5joef2baclmmet6u746ieq",
+			link: "https://play.google.com/store/music/artist?id=Azl7u5joef2baclmmet6u746ieq",
 			title: "Google Play",
 			iconSrc: googlePlay,
 		},
 		{
-			link:
-				"https://music.apple.com/us/album/st-thomas-feat-luna-luna-single/1521671579",
+			link: "https://music.apple.com/us/album/st-thomas-feat-luna-luna-single/1521671579",
 			title: "Apple Music",
 			iconSrc: appleMusic,
 		},
