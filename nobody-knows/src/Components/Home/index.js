@@ -17,7 +17,7 @@ const Home = ({ setCurrentPage, history, user, setUser }) => {
 			<section className="w-100 flex flex-column  justify-center items-center mh5-l pa2 pa0-ns">
 				<div className="w-100 w-75-l h-75 mb2 flex justify-center items-center">
 					<img
-						src="https://zayland-uploads.s3.amazonaws.com/333_FINAL_27c5fdbd5d.png"
+						src="https://zayland-uploads.s3.amazonaws.com/IMG_1316_f827c0d252.png"
 						alt=""
 						className="w-50-ns w-100"
 					/>
