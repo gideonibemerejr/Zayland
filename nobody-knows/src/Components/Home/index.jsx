@@ -13,7 +13,7 @@ const Home = ({ setCurrentPage, history, user, setUser }) => {
 	}, [setCurrentPage]);
 
 	useEffect(() => {
-		if (user) {
+		if (user || !user) {
 			setShowSong(true);
 			toggle();
 		}
